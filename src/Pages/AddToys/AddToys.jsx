@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
+import useTitle from '../../hooks/useTitle';
 
 const AddToys = () => {
+    
     const { user } = useContext(AuthContext);
+    useTitle('AddToys')
     const handleAddToys = (e) => {
         e.preventDefault();
         const form = e.target;

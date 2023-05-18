@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../../Providers/AuthProviders'
 import { toast } from 'react-toastify';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import useTitle from '../../hooks/useTitle';
 
 
 const Register = () => {
     const { createUser,updateUserProfile } = useContext(AuthContext)
     const [error, setError] = useState('')
     // const [show, setShow] = useState(false);
+    useTitle('Register')
     const handleRegister = (e) => {
         e.preventDefault();
         const form = e.target;

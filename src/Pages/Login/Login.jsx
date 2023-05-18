@@ -5,6 +5,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import useTitle from '../../hooks/useTitle';
 
 
 const Login = () => {
@@ -13,13 +14,15 @@ const Login = () => {
     // const [show, setShow] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('login')
     let from = location.state?.from?.pathname || "/";
     const handleLogin = (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
+       
 
         if (password.length < 6) {
             setError('your pass must be 6 characters')
