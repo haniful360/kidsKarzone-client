@@ -109,7 +109,7 @@ const Register = () => {
                             <label htmlFor="remember" className="font-medium text-gray-900">Remember
                                 me</label>
                         </div> */}
-                        <input type="submit" value='Login'
+                        <input type="submit" value='Register'
                             className="text-white bg-gradient-to-r from-cyan-500  to-blue-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full sm:w-auto px-5 py-2.5 text-center" />
                     </div>
                 </form>

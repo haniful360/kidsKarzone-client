@@ -4,29 +4,77 @@ import 'react-tabs/style/react-tabs.css';
 import './Categories.css'
 
 const Categories = () => {
-    const [tabIndex, setTabIndex] = useState(0);
-    return (
-        <div className='relative'>
-            <h2 className='shop-title text-center'>Shop category</h2>
-            <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                <TabList>
-                    <Tab>Sports car</Tab>
-                    <Tab>Mini police car</Tab>
-                    <Tab>Mini fire truck</Tab>
-                </TabList>
+    const [toggleState, setToggleState] = useState(1);
 
-                <TabPanel>
-                    <div>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias architecto nobis itaque saepe nostrum dolore, at modi laudantium rerum voluptate?
+    const toggleTab = (index) => {
+        setToggleState(index);
+    };
+
+    return (
+        <div className=''>
+            <h2 className='shop-title text center'>Shop Categories</h2>
+            <div className="container">
+                <div className="bloc-tabs">
+                    <button
+                        className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+                        onClick={() => toggleTab(1)}
+                    >
+                        Tab 1
+                    </button>
+                    <button
+                        className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+                        onClick={() => toggleTab(2)}
+                    >
+                        Tab 2
+                    </button>
+                    <button
+                        className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
+                        onClick={() => toggleTab(3)}
+                    >
+                        Tab 3
+                    </button>
+                </div>
+
+                <div className="content-tabs">
+                    <div
+                        className={toggleState === 1 ? "content  active-content" : "content"}
+                    >
+                        <h2>Content 1</h2>
+                        <hr />
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+                            praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
+                            vel voluptatum?
+                        </p>
                     </div>
-                </TabPanel>
-                <TabPanel>
-                    <h2>Any content 2</h2>
-                </TabPanel>
-                <TabPanel>
-                    <h2 className='text-3xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit tenetur quis aperiam dolorum rem voluptates fugit aspernatur at voluptatibus! Pariatur quas eveniet magnam deserunt dolor placeat, facere, nostrum voluptates, consequuntur impedit adipisci sit dolorem molestias. Esse, earum ut quas consequatur iure voluptatem. Repellendus voluptas, exercitationem molestias dicta totam nam odio.</h2>
-                </TabPanel>
-            </Tabs>
+
+                    <div
+                        className={toggleState === 2 ? "content  active-content" : "content"}
+                    >
+                        <h2>Content 2</h2>
+                        <hr />
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+                            voluptatum qui adipisci.
+                        </p>
+                    </div>
+
+                    <div
+                        className={toggleState === 3 ? "content  active-content" : "content"}
+                    >
+                        <h2>Content 3</h2>
+                        <hr />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
+                            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
+                            Accusamus in quia odit aspernatur provident et ad vel distinctio
+                            recusandae totam quidem repudiandae omnis veritatis nostrum
+                            laboriosam architecto optio rem, dignissimos voluptatum beatae
+                            aperiam voluptatem atque. Beatae rerum dolores sunt.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

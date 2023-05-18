@@ -11,12 +11,12 @@ const Header = () => {
     }
     const navItem = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to=''>All Toys</Link></li>
-        <li><Link to='/blog'>Blog</Link></li>
+        <li><Link to='/alltoys'>All Toys</Link></li>
+        <li><Link to='/blogs'>Blog</Link></li>
         {user ? <>
             <div className="flex">
-            <li><Link to='/'>Add Toys</Link></li>
-            <li><Link to='/blog'>My Toys</Link></li>
+            <li><Link to='/addtoys'>Add Toys</Link></li>
+            <li><Link to='/mytoys'>My Toys</Link></li>
             <li><button onClick={handleLogout}>Logout</button></li>
             <div className="tooltip tooltip-bottom tooltip-secondary" data-tip={user?.displayName || user?.email}>
                 <img className='w-10 h-10 rounded-full' src={user.photoURL} alt='' />

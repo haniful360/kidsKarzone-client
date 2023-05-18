@@ -15,8 +15,8 @@ const Banner = () => {
                 <img src={banner1} className="w-full" />
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-5 pl-6 text-center '>
-                        <h2 className='banner-title'>Affordable  Price <br /> For Car Servicing</h2>
-                        <p className='banner-des'>There are many variations of passages of  available, but <br /> the majority have suffered alteration in some form</p>
+                        <h2 className='banner-title'></h2>
+                        <p className='banner-des'></p>
                         <div className='flex gap-3'>
                             <button className="btn block mx-auto btn-secondary capitalize">get started</button>
 
@@ -33,8 +33,8 @@ const Banner = () => {
             <img src={banner2} className="w-full" />
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-5 pl-6 text-center '>
-                        <h2 className='banner-title'>Affordable  Price <br /> For Car Servicing</h2>
-                        <p className='banner-des'>There are many variations of passages of  available, but <br /> the majority have suffered alteration in some form</p>
+                        <h2 className='banner-title'></h2>
+                        <p className='banner-des'></p>
                         <div className='flex gap-3'>
                             <button className="btn block mx-auto btn-secondary capitalize">get started</button>
 
@@ -51,8 +51,8 @@ const Banner = () => {
             <img src={banner3} className="w-full" />
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-5 pl-6 text-center '>
-                        <h2 className='banner-title'>Affordable  Price <br /> For Car Servicing</h2>
-                        <p className='banner-des'>There are many variations of passages of  available, but <br /> the majority have suffered alteration in some form</p>
+                        <h2 className='banner-title'></h2>
+                        <p className='banner-des'></p>
                         <div className='flex gap-3'>
                             <button className="btn block mx-auto btn-secondary capitalize">get started</button>
 
@@ -69,8 +69,8 @@ const Banner = () => {
             <img src={banner4} className="w-full" />
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-5 pl-6 text-center '>
-                        <h2 className='banner-title'>Affordable  Price <br /> For Car Servicing</h2>
-                        <p className='banner-des'>There are many variations of passages of  available, but <br /> the majority have suffered alteration in some form</p>
+                        <h2 className='banner-title'></h2>
+                        <p className='banner-des'></p>
                         <div className='flex gap-3'>
                             <button className="btn block mx-auto btn-secondary capitalize">get started</button>
 
