@@ -2,13 +2,14 @@ import React, { useContext, useState } from 'react';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import '../../index.css';
 import { Link } from 'react-router-dom'
-import {AuthContext} from '../../Providers/AuthProviders'
+import { AuthContext } from '../../Providers/AuthProviders'
 import { toast } from 'react-toastify';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+    const { createUser,updateUserProfile } = useContext(AuthContext)
+    const [error, setError] = useState('')
     // const [show, setShow] = useState(false);
     const handleRegister = (e) => {
         e.preventDefault();
@@ -17,21 +18,48 @@ const Register = () => {
         const photoURL = form.photoURL.value
         const email = form.email.value
         const password = form.password.value;
-        console.log(name, photoURL, email, password);
+        // console.log(name, photoURL, email, password);
 
+        // validation
+        if (password.length < 6) {
+            setError('please add at least 6 characters in your password')
+            return;
+        }
+        else if (!/(?=.*[!@#$%^&*])/.test(password)) {
+            setError('please add at least one special character.')
+            return;
+        }
+
+        // user create
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                // handleUpdateUserProfile(name, photoURL);
+                handleUpdateUserProfile(name, photoURL);
                 form.reset();
-                toast.success('user has created successfully')
+                toast('user has created successfully')
                 // navigate('/login')
 
             })
             .catch(error => {
-                // console.log(error);
-                // setError(error.message);
+                console.log(error);
+                setError(error.message);
             })
+
+        // name and photoURL
+        const handleUpdateUserProfile = (name, photoURL) => {
+            const profile = {
+                displayName: name,
+                photoURL: photoURL
+            }
+            updateUserProfile(profile)
+                .then(result => {
+                    console.log(result.user);
+                })
+                .catch(err => {
+                    console.log(err);
+
+                })
+        }
 
     }
     return (
@@ -70,6 +98,7 @@ const Register = () => {
                             <input type=/* {show ? 'text' : 'password'} */'password' id="password" name='password'
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="password" required />
+                            <p className='text-red-600'>{error}</p>
                             {/* <p onClick={() => setShow(!show)} className='absolute top-[235px] left-72 lg:left-80'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p> */}
                             {/* <a className="text-sm font-medium text-blue-500 hover:text-indigo-500" href="#">Forgot Password?</a> */}
                         </div>

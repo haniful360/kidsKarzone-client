@@ -21,6 +21,11 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
+        if (password.length < 6) {
+            setError('your pass must be 6 characters')
+            return;
+        }
+
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
@@ -37,6 +42,7 @@ const Login = () => {
                 else if (err.message.includes('Firebase: Error (auth/user-not-found).')) {
                     setError('Your email is invalid');
                 }
+
 
             })
 
