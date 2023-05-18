@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import '../../index.css';
 import { Link } from 'react-router-dom'
+import {AuthContext} from '../../Providers/AuthProviders'
+import { toast } from 'react-toastify';
 
 
 const Register = () => {
-    
+    const {createUser} = useContext(AuthContext)
     // const [show, setShow] = useState(false);
     const handleRegister = (e) => {
         e.preventDefault();
@@ -21,7 +23,7 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                handleUpdateUserProfile(name, photoURL);
+                // handleUpdateUserProfile(name, photoURL);
                 form.reset();
                 toast.success('user has created successfully')
                 // navigate('/login')
@@ -29,7 +31,7 @@ const Register = () => {
             })
             .catch(error => {
                 // console.log(error);
-                setError(error.message);
+                // setError(error.message);
             })
 
     }
