@@ -1,0 +1,29 @@
+.shop-title {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    color: #1a1919ca;
+}
+
+.shop-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .shop-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 10px;
+    background: #fdc134;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }

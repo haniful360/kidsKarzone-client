@@ -1,0 +1,46 @@
+
+.banner-title {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 70px;
+    color: #1A1919;
+
+}
+.banner-describe{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #757575;
+}
+
+/* .get-started-btn {
+    background: linear-gradient(90deg, #FAC031 0%, 
+    #e8dd11 100%);
+    width: 172px;
+    height: 65px;
+    margin-top: 32px;
+} */
+
+
+
+    @media screen and (max-width: 680px) {
+        
+        .banner-title {
+            font-size: 24px;
+            line-height: 40px;
+        }
+
+        .banner-describe {
+            font-size: 16px;
+        }
+        .banner-img img {
+            width: 90%;
+            display: block;
+            margin: 20px auto;
+        }
+
+    }
