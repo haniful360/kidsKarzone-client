@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
-import '../../index.css'
+import '../../index.css';
+import { Link } from 'react-router-dom'
 
 
 const Login = () => {
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
     return (
         <div className="w-full space-y-2 relative">
             <div
@@ -19,14 +20,14 @@ const Login = () => {
                         <div>
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Your
                                 email</label>
-                            <input type="email" id="email"
+                            <input type="email" id="email" name='email'
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="username@mail.com" required />
                         </div>
                         <div className=''>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your
                                 password</label>
-                            <input type={show ? 'text' : 'password'} id="password"
+                            <input type=/* {show ? 'text' : 'password'} */'password' id="password" name='password'
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="password" required />
                                 {/* <p onClick={() => setShow(!show)} className='absolute top-[235px] left-72 lg:left-80'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p> */}
@@ -60,9 +61,9 @@ const Login = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <span className="block mb-2 text-sm font-medium text-gray-900">Don't have account? <a
-                        className="text-blue-500 hover:text-indigo-500" href="#">Signup
-                        now</a></span>
+                    <span className="block mb-2 text-sm font-medium text-gray-900">Don't have account? <Link to='/register'
+                        className="text-blue-500 hover:text-indigo-500">Signup
+                        now</Link></span>
                 </div>
 
             </div>
