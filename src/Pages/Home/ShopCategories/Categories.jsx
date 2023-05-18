@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import './Categories.css'
 
 const Categories = () => {
@@ -19,19 +17,19 @@ const Categories = () => {
                         className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(1)}
                     >
-                        Tab 1
+                        Sports Car
                     </button>
                     <button
                         className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(2)}
                     >
-                        Tab 2
+                        Mini Fire Truck
                     </button>
                     <button
                         className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
                         onClick={() => toggleTab(3)}
                     >
-                        Tab 3
+                        Mini Police Car
                     </button>
                 </div>
 
@@ -41,11 +39,28 @@ const Categories = () => {
                     >
                         <h2>Content 1</h2>
                         <hr />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                            praesentium incidunt quia aspernatur quasi quidem facilis quo nihil
-                            vel voluptatum?
-                        </p>
+                        <div className="grid lg:grid-cols-2 gap-10">
+                            <div className="card card-compact bg-base-100 shadow-md">
+                                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">Shoes!</h2>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                    <div className="card-actions">
+                                        <button className="btn btn-primary">view details button</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="card card-compact bg-base-100 shadow-md">
+                                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">Shoes!</h2>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                    <div className="card-actions justify-end">
+                                        <button className="btn btn-primary">view details button</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div

@@ -25,8 +25,8 @@ const Header = () => {
         </> : <li><Link to='/login'>Login</Link></li>}
     </>
     return (
-        <div className="max-w-5xl mx-auto bg-lime-400 ">
-            <div className="navbar bg-base-100 ">
+        <div className="bg-base-200 ">
+            <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
