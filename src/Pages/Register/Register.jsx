@@ -1,11 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { FcGoogle } from 'react-icons/fc';
-import { FaGithub, FaTwitter } from 'react-icons/fa';
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import '../../index.css';
 import { Link } from 'react-router-dom'
 import {AuthContext} from '../../Providers/AuthProviders'
 import { toast } from 'react-toastify';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 
 const Register = () => {
@@ -85,21 +84,7 @@ const Register = () => {
                             className="text-white bg-gradient-to-r from-cyan-500  to-blue-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full sm:w-auto px-5 py-2.5 text-center" />
                     </div>
                 </form>
-                <div className="flex flex-col items-center ">
-                    <div className="divider mt-0 text-gray-900">or login with</div>
-                    <div className="flex items-center space-x-5">
-
-                        <a className="bg-white hover:ring ring-blue-500 rounded-full w-10 h-10 flex items-center justify-center" href="#">
-                            <FcGoogle className='w-8 h-8'></FcGoogle>
-                        </a>
-                        <a className="bg-white hover:ring ring-blue-500 rounded-full w-10 h-10 flex items-center justify-center" href="">
-                            <FaGithub className='w-8 h-8'></FaGithub>
-                        </a>
-                        <a className="bg-white hover:ring ring-blue-500 rounded-full w-10 h-10 flex items-center justify-center" href="">
-                            <FaTwitter style={{ color: '#00acee' }} className='w-8 h-8 '></FaTwitter>
-                        </a>
-                    </div>
-                </div>
+                <SocialLogin></SocialLogin>
                 <div className="flex">
                     <span className="block mb-2 text-sm font-medium text-gray-900">Already have an account? <Link to='/login'
                         className="text-blue-500 hover:text-indigo-500">Login
