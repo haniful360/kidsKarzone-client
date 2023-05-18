@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
+import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
+import '../../index.css'
 
 
 const Login = () => {
+    const [show, setShow] = useState(false);
     return (
-        <div className="w-full space-y-2">
+        <div className="w-full space-y-2 relative">
             <div
                 className="flex flex-col space-y-4 mx-auto w-[22rem] md:w-96  p-5 rounded-md bg-white/80 backdrop-blur-lg shadow-lg">
                 <div className="flex justify-center">
@@ -20,12 +23,13 @@ const Login = () => {
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="username@mail.com" required />
                         </div>
-                        <div>
+                        <div className=''>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your
                                 password</label>
-                            <input type="password" id="password"
+                            <input type={show ? 'text' : 'password'} id="password"
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="password" required />
+                                {/* <p onClick={() => setShow(!show)} className='absolute top-[235px] left-72 lg:left-80'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p> */}
                             <a className="text-sm font-medium text-blue-500 hover:text-indigo-500" href="#">Forgot Password?</a>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -41,17 +45,17 @@ const Login = () => {
                 </form>
                 <div className="flex flex-col items-center ">
                     {/* <p className="block mb-2 text-sm font-medium text-gray-900">or login with</p> */}
-                    <div className="divider mt-0">or login with</div>
-                    <div className="flex items-center space-x-5 bg-white shadow-md rounded-lg py-2 lg:px-5 ">
+                    <div className="divider mt-0 text-gray-900">or login with</div>
+                    <div className="flex items-center space-x-5">
 
-                        <a className="btn-bg-white hover:ring ring-blue-300 rounded-full w-9 h-9" href="#">
-                            <FcGoogle className='w-9 h-9'></FcGoogle>
+                        <a className="bg-white hover:ring ring-blue-500 rounded-full w-10 h-10 flex items-center justify-center" href="#">
+                            <FcGoogle className='w-8 h-8'></FcGoogle>
                         </a>
-                        <a className="bg-white hover:ring ring-blue-300 rounded-full w-9 h-9" href="">
-                            <FaGithub className='w-9 h-9'></FaGithub>
+                        <a className="bg-white hover:ring ring-blue-500 rounded-full w-10 h-10 flex items-center justify-center" href="">
+                            <FaGithub className='w-8 h-8'></FaGithub>
                         </a>
-                        <a className="bg-white hover:ring ring-blue-300 rounded-full w-9 h-9" href="">
-                            <FaTwitter style={{ color: '#00acee' }} className='w-9 h-9'></FaTwitter>
+                        <a className="bg-white hover:ring ring-blue-500 rounded-full w-10 h-10 flex items-center justify-center" href="">
+                            <FaTwitter style={{ color: '#00acee' }} className='w-8 h-8 '></FaTwitter>
                         </a>
                     </div>
                 </div>
