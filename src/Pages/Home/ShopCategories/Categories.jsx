@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Categories.css'
 
 const Categories = () => {
@@ -7,6 +7,7 @@ const Categories = () => {
     const toggleTab = (index) => {
         setToggleState(index);
     };
+    
 
     return (
         <div className=''>

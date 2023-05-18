@@ -76,9 +76,9 @@ const AddToys = () => {
                             <span className="label-text">sub category</span>
                         </label>
                         <select defaultValue='filter' name='subcategory' className="select select-bordered w-full">
-                            <option selected>Hot Hatches</option>
-                            <option>Muscle Cars</option>
-                            <option>Super cars</option>
+                            <option selected>SportsCar</option>
+                            <option>MiniFireTruck</option>
+                            <option>MiniPoliceCar</option>
                         </select>
                     </div>
                     <div className="form-control md:w-1/2">
