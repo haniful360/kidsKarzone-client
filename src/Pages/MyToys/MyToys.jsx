@@ -13,7 +13,7 @@ const MyToys = () => {
             .then(data => {
                 setMyToys(data)
             })
-    }, [])
+    }, [myToys])
     return (
         <div className='container'>
             <h3>my toys:{myToys.length}</h3>

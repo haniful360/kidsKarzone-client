@@ -8,8 +8,9 @@ const UpdateToys = () => {
     
     const { user } = useContext(AuthContext);
     const loadToyData = useLoaderData();
+    const {_id,name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description} = loadToyData;
     useTitle('UpdateToys')
-    const handleAddToys = (e) => {
+    const handleUpdate = (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -22,21 +23,20 @@ const UpdateToys = () => {
         const photoURL = form.PhotoURL.value;
         const description = form.description.value;
 
-        const addToys = { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description }
-        // console.log(addToys);
-        // const addtoys = { name, selleremail }
-
-        fetch('http://localhost:5000/toys', {
-            method: 'POST',
+        const updateToys = { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description }
+      
+        fetch(`http://localhost:5000/toys/${_id}`, {
+            method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(addToys)
+            body: JSON.stringify(updateToys)
         })
             .then(res => res.json())
             .then(data => {
-                if(data.insertedId){
+                console.log(data);
+                if(data.modifiedCount ===1){
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Do you want to continue',
+                        text: 'Your Data is Update',
                         icon: 'success',
                         confirmButtonText: 'OK'
                       })
@@ -46,16 +46,16 @@ const UpdateToys = () => {
     }
     return (
         <div className='bg-[#F4F3F0] px-4 md:px-28 py-16'>
-            <h2 className='toy-title text-center'>Add a Toys</h2>
+            <h2 className='toy-title text-center'>Update a Toys</h2>
             <p className='toy-des'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, minima suscipit laborum quasi harum explicabo vitae consectetur rerum error nobis.</p>
-            <form onSubmit={handleAddToys}>
+            <form onSubmit={handleUpdate}>
                 {/* row 1 */}
                 <div className="md:flex gap-6">
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="Name" name='name' className="input input-bordered w-full" />
+                        <input type="text" defaultValue={name} placeholder="Name" name='name' className="input input-bordered w-full" />
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -76,7 +76,7 @@ const UpdateToys = () => {
                         <label className="label">
                             <span className="label-text">price</span>
                         </label>
-                        <input type="number" placeholder="price" name='price' className="input input-bordered w-full" />
+                        <input type="number" defaultValue={price} placeholder="price" name='price' className="input input-bordered w-full" />
                     </div>
                 </div>
                 {/* row 3 */}
@@ -85,7 +85,7 @@ const UpdateToys = () => {
                         <label className="label">
                             <span className="label-text">sub category</span>
                         </label>
-                        <select defaultValue='filter' name='subcategory' className="select select-bordered w-full">
+                        <select defaultValue={subcategory} name='subcategory' className="select select-bordered w-full">
                             <option selected>SportsCar</option>
                             <option>MiniFireTruck</option>
                             <option>MiniPoliceCar</option>
@@ -95,7 +95,7 @@ const UpdateToys = () => {
                         <label className="label">
                             <span className="label-text">rating</span>
                         </label>
-                        <input type="number" placeholder="rating" name='rating' className="input input-bordered w-full" />
+                        <input type="number" defaultValue={rating} placeholder="rating" name='rating' className="input input-bordered w-full" />
                     </div>
                 </div>
                 {/* row 4 */}
@@ -104,13 +104,13 @@ const UpdateToys = () => {
                         <label className="label">
                             <span className="label-text">available quantity</span>
                         </label>
-                        <input type="number" placeholder="available quantity" name='quantity' className="input input-bordered w-full" />
+                        <input type="number" defaultValue={quantity} placeholder="available quantity" name='quantity' className="input input-bordered w-full" />
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">PhotoURL</span>
                         </label>
-                        <input type="text" placeholder="PhotoURL" name='PhotoURL' className="input input-bordered w-full" />
+                        <input type="text" defaultValue={photoURL} placeholder="PhotoURL" name='PhotoURL' className="input input-bordered w-full" />
                     </div>
                 </div>
                 {/* row 5 */}
@@ -118,7 +118,7 @@ const UpdateToys = () => {
                     <label className="label">
                         <span className="label-text">details descriptions</span>
                     </label>
-                    <textarea className="textarea textarea-bordered w-full" name='description' placeholder="Details Descriptions"></textarea>
+                    <textarea className="textarea textarea-bordered w-full" name='description' defaultValue={description} placeholder="Details Descriptions"></textarea>
                 </div>
                 <input type="submit" value="Add a Toys" className='btn btn-block btn btn-accent outline-0 text-white capitalize mt-6' />
             </form>
