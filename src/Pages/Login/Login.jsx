@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-// import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
+import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import '../../index.css';
 import { AuthContext } from '../../Providers/AuthProviders';
 import SocialLogin from '../Shared/SocialLogin/SocialLogin';
@@ -11,7 +11,7 @@ import useTitle from '../../hooks/useTitle';
 const Login = () => {
     const { signInUser } = useContext(AuthContext);
     const [error, setError] = useState('')
-    // const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
     useTitle('login')
@@ -38,7 +38,6 @@ const Login = () => {
 
             })
             .catch(err => {
-                // setError(err.message)
                 if (err.message.includes('Firebase: Error (auth/wrong-password).')) {
                     setError('Your password is incorrect')
                 }
@@ -51,9 +50,9 @@ const Login = () => {
 
     }
     return (
-        <div className="w-full space-y-2 relative">
+        <div className="w-full  lg:px-0 px-2 mt-10 mb-16 space-y-2 relative">
             <div
-                className="flex flex-col space-y-4 mx-auto w-[22rem] md:w-96  p-5 rounded-md bg-white/80 backdrop-blur-lg shadow-lg">
+                className="flex flex-col space-y-4 mx-auto w-[22rem] md:w-96  p-5 rounded-md  border border-neutral-300 backdrop-blur-lg shadow-lg">
                 <div className="flex justify-center">
                     <h1 className="font-medium text-xl"> Please Login</h1>
                 </div>
@@ -73,7 +72,7 @@ const Login = () => {
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="password" required />
                             <p className='text-red-600'>{error}</p>
-                            {/* <p onClick={() => setShow(!show)} className='absolute top-[235px] left-72 lg:left-80'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p> */}
+                            <p onClick={() => setShow(!show)} className='absolute top-[235px] left-72 lg:left-80'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p>
                             <a className="text-sm font-medium text-blue-500 hover:text-indigo-500" href="#">Forgot Password?</a>
                         </div>
                         <div className="flex items-center space-x-2">

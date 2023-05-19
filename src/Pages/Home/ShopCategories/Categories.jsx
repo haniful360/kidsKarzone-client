@@ -1,96 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import './Categories.css'
+import Category from './Category';
 
 const Categories = () => {
-    const [toggleState, setToggleState] = useState(1);
-
-    const toggleTab = (index) => {
-        setToggleState(index);
-    };
-    
-
+    const [subcategories, setSubCategories] = useState([])
+    useEffect(() => {
+        fetch(`http://localhost:5000/toys`)
+            .then(res => res.json())
+            .then(data => {
+                setSubCategories(data);
+            })
+    }, [])
     return (
-        <div className=''>
-            <h2 className='shop-title text center'>Shop Categories</h2>
-            <div className="container">
-                <div className="bloc-tabs">
-                    <button
-                        className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-                        onClick={() => toggleTab(1)}
-                    >
-                        Sports Car
-                    </button>
-                    <button
-                        className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-                        onClick={() => toggleTab(2)}
-                    >
-                        Mini Fire Truck
-                    </button>
-                    <button
-                        className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
-                        onClick={() => toggleTab(3)}
-                    >
-                        Mini Police Car
-                    </button>
-                </div>
-
-                <div className="content-tabs">
-                    <div
-                        className={toggleState === 1 ? "content  active-content" : "content"}
-                    >
-                        <h2>Content 1</h2>
-                        <hr />
-                        <div className="grid lg:grid-cols-2 gap-10">
-                            <div className="card card-compact bg-base-100 shadow-md">
-                                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Shoes!</h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div className="card-actions">
-                                        <button className="btn btn-primary">view details button</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card card-compact bg-base-100 shadow-md">
-                                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Shoes!</h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">view details button</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        className={toggleState === 2 ? "content  active-content" : "content"}
-                    >
-                        <h2>Content 2</h2>
-                        <hr />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-                            voluptatum qui adipisci.
-                        </p>
-                    </div>
-
-                    <div
-                        className={toggleState === 3 ? "content  active-content" : "content"}
-                    >
-                        <h2>Content 3</h2>
-                        <hr />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-                            nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-                            Accusamus in quia odit aspernatur provident et ad vel distinctio
-                            recusandae totam quidem repudiandae omnis veritatis nostrum
-                            laboriosam architecto optio rem, dignissimos voluptatum beatae
-                            aperiam voluptatem atque. Beatae rerum dolores sunt.
-                        </p>
-                    </div>
-                </div>
+        <div className='mb-16'>
+            <div className='text-center'>
+                <h2 className='shop-title mb-3'>Shop Categories</h2>
+                <p>Welcome to our car shop category, where you can find an extensive range <br /> of products and services related to automobiles. </p>
             </div>
+            <p>length:{subcategories.length}</p>
+
+            {
+                subcategories.map(sCategory => <Category
+                    key={sCategory._id}
+                    sCategory={sCategory}
+                ></Category>)
+            }
         </div>
     );
 };

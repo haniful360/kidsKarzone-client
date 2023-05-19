@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProviders';
 import useTitle from '../../hooks/useTitle';
 import Swal from 'sweetalert2';
+import { useLoaderData } from 'react-router-dom';
 
-const AddToys = () => {
+const UpdateToys = () => {
     
     const { user } = useContext(AuthContext);
-    useTitle('AddToys')
+    const loadToyData = useLoaderData();
+    useTitle('UpdateToys')
     const handleAddToys = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -14,14 +16,14 @@ const AddToys = () => {
         const sellername = form.sellername.value;
         const selleremail = form.selleremail.value;
         const price = form.price.value;
-        const subcategory = form.subcategory.value;
+        const subcategory = form.name.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const photoURL = form.PhotoURL.value;
         const description = form.description.value;
 
         const addToys = { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description }
-        console.log(addToys);
+        // console.log(addToys);
         // const addtoys = { name, selleremail }
 
         fetch('http://localhost:5000/toys', {
@@ -31,7 +33,6 @@ const AddToys = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if(data.insertedId){
                     Swal.fire({
                         title: 'Success!',
@@ -84,17 +85,17 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">sub category</span>
                         </label>
-                        <select name='subcategory' className="select select-bordered w-full">
-                            <option value='SportsCar' selected>SportsCar</option>
-                            <option value="MiniFireTruck">MiniFireTruck</option>
-                            <option value='MiniPoliceCar'>MiniPoliceCar</option>
+                        <select defaultValue='filter' name='subcategory' className="select select-bordered w-full">
+                            <option selected>SportsCar</option>
+                            <option>MiniFireTruck</option>
+                            <option>MiniPoliceCar</option>
                         </select>
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">rating</span>
                         </label>
-                        <input type="text" placeholder="rating" name='rating' className="input input-bordered w-full" />
+                        <input type="number" placeholder="rating" name='rating' className="input input-bordered w-full" />
                     </div>
                 </div>
                 {/* row 4 */}
@@ -125,4 +126,4 @@ const AddToys = () => {
     );
 };
 
-export default AddToys;
+export default UpdateToys;

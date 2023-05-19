@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../../Providers/AuthProviders';
+// import log from '../../../assets/logo.png'
 
 const Header = () => {
     const { user, logout } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const Header = () => {
         </> : <li><Link to='/login'>Login</Link></li>}
     </>
     return (
-        <div className="bg-base-200 ">
+        <div className="bg-base-200 shadow ">
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar">
                     <div className="dropdown">
@@ -36,7 +37,9 @@ const Header = () => {
                             {navItem}
                         </ul>
                     </div>
-                    <Link to='/' className=" bg-red-500 text-xl">kidsCarZone</Link>
+                    <Link to='/' className=" bg-red-500 text-xl">
+                      
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
