@@ -22,7 +22,7 @@ const AddToys = () => {
 
         const addToys = { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description }
         console.log(addToys);
-        // const addtoys = { name, selleremail }
+    
 
         fetch('http://localhost:5000/toys', {
             method: 'POST',

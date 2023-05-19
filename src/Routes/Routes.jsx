@@ -11,48 +11,58 @@ import MyToys from "../Pages/MyToys/MyToys";
 import Blogs from "../Pages/Blogs/Blogs";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import UpdateToys from "../Pages/UpdateToys/UpdateToys";
+import AllToyViewDetails from "../Pages/AllToyViewDetails/AllToyViewDetails";
+import PrivateRoute from "./PrivateRoute";
+// import PrivateRoute from './/Routes/PrivateRoute'
+
 
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        errorElement:<ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         element: <Main></Main>,
 
         children: [
             {
                 path: '/',
-                element:<Home></Home>
+                element: <Home></Home>
             },
             {
                 path: 'login',
-                element:<Login></Login>
+                element: <Login></Login>
             },
             {
                 path: 'register',
-                element:<Register></Register>
+                element: <Register></Register>
             },
             {
                 path: 'alltoys',
-                element:<AllToys></AllToys>
+                element: <AllToys></AllToys>
+            },
+            {
+                path: 'alltoydetails/:id',
+                element: <PrivateRoute><AllToyViewDetails></AllToyViewDetails></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+
             },
             {
                 path: 'addtoys',
-                element:<AddToys></AddToys>
+                element: <AddToys></AddToys>
             },
             {
                 path: 'updatetoys/:id',
-                element:<UpdateToys></UpdateToys>,
-                loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+                element: <UpdateToys></UpdateToys>,
+                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
             },
             {
                 path: 'mytoys',
-                element:<MyToys></MyToys>
+                element: <MyToys></MyToys>
             },
             {
                 path: 'blogs',
-                element:<Blogs></Blogs>
+                element: <Blogs></Blogs>
             },
         ]
     },

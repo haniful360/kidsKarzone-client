@@ -3,8 +3,7 @@ import './Categories.css'
 
 
 const Category = () => {
-    // console.log(sCategory);
-
+  
     const [toggleState, setToggleState] = useState(1);
     const toggleTab = (index) => {
         setToggleState(index);

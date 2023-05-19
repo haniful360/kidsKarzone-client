@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Category from './Category';
 
 const Categories = () => {
-    const [subcategories, setSubCategories] = useState([])
+    const [subcategories, setSubCategories] = useState(['SportsCar'])
     useEffect(() => {
-        fetch(`http://localhost:5000/toys`)
+        fetch(`http://localhost:5000/subcategory?subcategory=${subcategories}`)
             .then(res => res.json())
             .then(data => {
                 setSubCategories(data);

@@ -16,7 +16,6 @@ const MyToys = () => {
     }, [myToys])
     return (
         <div className='container'>
-            <h3>my toys:{myToys.length}</h3>
             <div className="overflowauto w-full mx-auto">
                 <table className="table w-full mx-auto">
                     {/* head */}
