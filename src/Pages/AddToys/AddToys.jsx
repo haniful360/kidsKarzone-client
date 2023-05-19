@@ -44,7 +44,8 @@ const AddToys = () => {
 
     }
     return (
-        <div className='bg-[#F4F3F0] px-4 md:px-28 py-16'>
+        <div className='my-12 max-w-6xl mx-auto'>
+            <div className='bg-[#F4F3F0] rounded-md p-12'>
             <h2 className='toy-title text-center'>Add a Toys</h2>
             <p className='toy-des'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, minima suscipit laborum quasi harum explicabo vitae consectetur rerum error nobis.</p>
             <form onSubmit={handleAddToys}>
@@ -121,6 +122,7 @@ const AddToys = () => {
                 </div>
                 <input type="submit" value="Add a Toys" className='btn btn-block btn btn-accent outline-0 text-white capitalize mt-6' />
             </form>
+        </div>
         </div>
     );
 };

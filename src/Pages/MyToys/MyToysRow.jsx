@@ -1,6 +1,8 @@
 import React from 'react';
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { FaRegStar, FaStar } from 'react-icons/fa';
 
 const MyToysRow = ({ toy, myToys, setMyToys }) => {
     const { _id, sellername, description, photoURL, name, rating, quantity, price, subcategory } = toy;
@@ -51,10 +53,16 @@ const MyToysRow = ({ toy, myToys, setMyToys }) => {
             </td>
             <td>{name}</td>
             <td>{sellername}</td>
-            <td>{price}</td>
+            <td>${price}</td>
             <td>{quantity}</td>
             <td>{subcategory}</td>
-            <td>{rating}</td>
+            <td><Rating
+                placeholderRating={rating}
+                readonly
+                emptySymbol={<FaRegStar className="text-warning"></FaRegStar>}
+                placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+                fullSymbol={<FaStar></FaStar>}
+            />{rating}</td>
             <td>{description}</td>
             <th>
                 <Link to={`/updatetoys/${_id}`}>

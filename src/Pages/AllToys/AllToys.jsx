@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import useTitle from '../../hooks/useTitle';
 import AllToysTable from './AllToysTable';
+import Loading from '../Shared/Loading/Loading';
 
 const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
+    const [loading, setLoading] = useState(true)
     useTitle('AllToys')
     useEffect(() => {
         fetch('http://localhost:5000/toys')
             .then(res => res.json())
-            .then(data => setAllToys(data))
+            .then(data => {
+                setAllToys(data)
+                setLoading(false)
+            })
     }, [])
+    if(loading){
+        return <Loading></Loading>
+    }
     return (
-        <div className='mb-12'>
-            <h3>all toys:{allToys.length}</h3>
-            <div className="overflow-y-auto w-full container">
+        <div className='my-12'>
+            <div className="overflow-y-auto w-full max-w-6xl mx-auto">
                 <table className="table w-full">
                     {/* head */}
                     <thead>

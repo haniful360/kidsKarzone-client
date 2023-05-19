@@ -22,7 +22,7 @@ const AllToysTable = ({allToy}) => {
             <td>{sellername}</td>
             <td>{name}</td>
             <td>{subcategory}</td>
-            <td>{price}</td>
+            <td>${price}</td>
             <td>{quantity}</td>
             <th>
                 <Link to={`/alltoydetails/${_id}`}><button className="btn btn-accent btn-md">details</button></Link>
