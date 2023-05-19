@@ -8,7 +8,9 @@ import { HiArrowSmRight, HiArrowSmLeft } from 'react-icons/hi';
 
 const Banner = () => {
     return (
-        <div className="carousel w-full lg:h-[80vh] h-[500px]  rounded-lg mt-4">
+        <div className="carousel w-full lg:h-[80vh] h-[500px]  rounded-lg mt-4"data-aos="zoom-in-up"
+        data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={banner1} className="w-full" />
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">

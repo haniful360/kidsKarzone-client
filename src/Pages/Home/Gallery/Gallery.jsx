@@ -5,7 +5,7 @@ const Gallery = () => {
     return (
         <div className='mb-12'>
             <div className="gallery">
-                <h1>Our Gallery</h1>
+                <h2>Our Gallery</h2>
                 <p className='text-xl mb-10'>In our car gallery, we curate a diverse selection of vehicles that <br /> cater to various tastes and preferences. </p>
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                     <div className="gallery_photo" data-aos="fade-right">

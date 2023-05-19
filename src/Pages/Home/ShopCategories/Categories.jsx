@@ -12,8 +12,8 @@ const Categories = () => {
     }, [])
     return (
         <div className='mb-16'>
-            <div className='text-center'>
-                <h2 className='shop-title mb-3'>Shop Categories</h2>
+            <div className='text-center shop-categories'>
+                <h2 className='mb-3'>Shop Categories</h2>
                 <p>Welcome to our car shop category, where you can find an extensive range <br /> of products and services related to automobiles. </p>
             </div>
             <p>length:{subcategories.length}</p>

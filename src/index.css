@@ -3,17 +3,76 @@
 @tailwind utilities;
 
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'EB Garamond', serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 70px;
+  color: #1A1919;
+  
+}
 
-/* body {
-  min-height: 100vh;
-  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
-  --tw-gradient-from: #06b6d4;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(6 182 212 / 0));
-  --tw-gradient-stops: var(--tw-gradient-from), #a855f7, var(--tw-gradient-to, rgb(168 85 247 / 0));
-  --tw-gradient-to: #3b82f6;
-} */
+p,
+li,
+a ,td,th{
+  
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #0d0d0d;
+}
+
+/* header */
 
 
+.shop-categories h2,
+.gallery h2 {
 
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  color: #213b52;
+}
 
+.shop-categories h2::before,
+.gallery h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
 
+.shop-categories h2::after,
+.gallery h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #fdc134;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.shop-categories p,
+.gallery p {
+  color: #777;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  padding: 10px;
+}

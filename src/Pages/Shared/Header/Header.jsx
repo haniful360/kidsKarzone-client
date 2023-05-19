@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../../Providers/AuthProviders';
+import ActiveLink from '../../Others/ActiveLink/ActiveLink';
 // import log from '../../../assets/logo.png'
 
 const Header = () => {
@@ -11,19 +12,19 @@ const Header = () => {
             .catch(error => { })
     }
     const navItem = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/alltoys'>All Toys</Link></li>
-        <li><Link to='/blogs'>Blog</Link></li>
+        <li><ActiveLink to='/'>Home</ActiveLink></li>
+        <li><ActiveLink to='/alltoys'>All Toys</ActiveLink></li>
+        <li><ActiveLink to='/blogs'>Blog</ActiveLink></li>
         {user ? <>
             <div className="flex">
-            <li><Link to='/addtoys'>Add Toys</Link></li>
-            <li><Link to='/mytoys'>My Toys</Link></li>
+            <li><ActiveLink to='/addtoys'>Add Toys</ActiveLink></li>
+            <li><ActiveLink to='/mytoys'>My Toys</ActiveLink></li>
             <li><button onClick={handleLogout}>Logout</button></li>
             <div className="tooltip tooltip-bottom tooltip-secondary" data-tip={user?.displayName || user?.email}>
                 <img className='w-10 h-10 rounded-full' src={user.photoURL} alt='' />
             </div>
             </div>
-        </> : <li><Link to='/login'>Login</Link></li>}
+        </> : <li><ActiveLink to='/login'>Login</ActiveLink></li>}
     </>
     return (
         <div className="bg-base-200 shadow ">

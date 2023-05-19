@@ -69,7 +69,7 @@ const Register = () => {
             <div
                 className="flex flex-col space-y-4 mx-auto lg:w-[28rem] p-8 rounded-md border border-neutral-300 backdrop-blur-lg shadow-lg">
                 <div className="flex justify-center">
-                    <h1 className="font-medium text-xl"> Please register</h1>
+                    <h1 className="font-medium text-2xl"> Please Register!</h1>
                 </div>
                 <form onSubmit={handleRegister}>
                     <div className="flex flex-col space-y-4">
