@@ -13,6 +13,7 @@ import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import UpdateToys from "../Pages/UpdateToys/UpdateToys";
 import AllToyViewDetails from "../Pages/AllToyViewDetails/AllToyViewDetails";
 import PrivateRoute from "./PrivateRoute";
+import SubCategoryDetails from "../Pages/SubCategoryDetails/SubCategoryDetails";
 // import PrivateRoute from './/Routes/PrivateRoute'
 
 
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
                 element: <AllToys></AllToys>
             },
             {
+                path: 'subCategoryDetails/:id',
+                element: <SubCategoryDetails></SubCategoryDetails>,
+                loader:({params}) => fetch(`http://localhost:5000/subcategory/${params.id}`)
+            },
+            {
                 path: 'alltoydetails/:id',
                 element: <PrivateRoute><AllToyViewDetails></AllToyViewDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
@@ -64,6 +70,7 @@ const router = createBrowserRouter([
                 path: 'blogs',
                 element: <Blogs></Blogs>
             },
+
         ]
     },
 ]);

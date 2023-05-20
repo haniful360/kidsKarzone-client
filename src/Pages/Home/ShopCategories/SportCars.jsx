@@ -1,6 +1,7 @@
 import React from 'react';
 import Rating from 'react-rating';
 import { FaStar, FaRegStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const SportCars = ({ sCar }) => {
     const { _id, name, photoURL, rating, price } = sCar;
@@ -22,8 +23,10 @@ const SportCars = ({ sCar }) => {
                     <span>{rating}</span>
 
                 </div>
-                <div className="    ">
-                    <button className="btn btn-xs sm:btn-sm btn-accent text-white capitalize">viewDetails</button>
+                <div className="">
+                    <Link to={`subCategoryDetails/${_id}`}>
+                        <button className="btn btn-xs sm:btn-sm btn-accent text-white capitalize">viewDetails</button>
+                    </Link>
                 </div>
             </div>
         </div>

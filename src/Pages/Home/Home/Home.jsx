@@ -4,6 +4,7 @@ import Categories from '../ShopCategories/Categories';
 import useTitle from '../../../hooks/useTitle';
 import Gallery from '../Gallery/Gallery';
 import Loading from '../../Shared/Loading/Loading';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
     const [loading, setLoading] = useState(true)
@@ -22,6 +23,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Categories></Categories>
+            <Testimonials></Testimonials>
         </div>
     );
 };

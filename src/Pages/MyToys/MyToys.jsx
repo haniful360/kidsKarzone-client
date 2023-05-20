@@ -18,11 +18,15 @@ const MyToys = () => {
             })
     }, [myToys])
     // loading
-    if(loading){
+    if (loading) {
         return <Loading></Loading>
     }
     return (
         <div className='max-w-6xl mx-auto my-12'>
+            <div>
+                <button className="btn btn-outline btn-success">Ascending</button>
+                <button className="btn btn-outline btn-accent">Descending </button>
+            </div>
             <div className="overflowauto w-full mx-auto">
                 <table className="table w-full mx-auto">
                     {/* head */}
