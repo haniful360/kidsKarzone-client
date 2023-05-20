@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const SubCategoryDetails = () => {
@@ -7,16 +9,36 @@ const SubCategoryDetails = () => {
     const { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description } = singleSubcategory;
 
     return (
-        <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
-                    <img src={photoURL} className="rounded-xl" />
-                </figure>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
+        <div className='max-w-6xl mx-auto my-16 '>
+            <div className="card w-5/12 mx-auto shadow border-2 border-t-[#105397]">
+                <figure><img src={photoURL} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">
+                    name:
+                       <span  className='font-semibold text-[26px] text-[#105397]'> {name}</span>
+                        <div className="badge bg-[#105397]">NEW</div>
+                    </h2>
+                    <p>sellername: <span  className='font-semibold text-[22px] text-[#105397]'>{sellername}</span> </p>
+                    <p >selleremail: <span className='font-semibold text-[22px] text-[#105397]'>{selleremail}</span> </p>
+                    <p>subcategory: <span  className='font-semibold text-[22px] text-[#105397]'>{subcategory}</span> </p>
+                    <p>price: <span  className='font-semibold text-[22px] text-[#105397]'>{price}</span> </p>
+                    <p>quantity: <span  className='font-semibold text-[22px] text-[#105397]'>{quantity}</span> </p>
+                    <p>description: <span  className='font-semibold text-[22px] text-[#105397]'>{description}</span> </p>
+                    <div className='flex items-center gap-1'>
+                        <Rating
+                            placeholderRating={rating}
+                            readonly
+                            emptySymbol={<FaRegStar className="text-warning"></FaRegStar>}
+                            placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+                            fullSymbol={<FaStar></FaStar>}
+
+                        />
+                        <div className='w-6 h-6 rounded-full bg-slate-300'>
+                        <span className=''>{rating}</span>
+                        </div>
+                    </div>
+                    <div className="card-actions justify-end">
+                        <div className="badge text-[#105397] badge-outline">#Products</div>
                     </div>
                 </div>
             </div>
