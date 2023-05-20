@@ -69,7 +69,7 @@ const Register = () => {
             <div
                 className="flex flex-col space-y-4 mx-auto lg:w-[28rem] p-8 rounded-md border border-neutral-300 backdrop-blur-lg shadow-lg">
                 <div className="flex justify-center">
-                    <h1 className="font-medium text-2xl"> Please Register!</h1>
+                    <h1 className="font-medium text-[#105397] text-2xl"> Please Register!</h1>
                 </div>
                 <form onSubmit={handleRegister}>
                     <div className="flex flex-col space-y-4">
@@ -112,7 +112,7 @@ const Register = () => {
                                 me</label>
                         </div> */}
                         <input type="submit" value='Register'
-                            className="text-white bg-gradient-to-r from-cyan-500  to-blue-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full sm:w-auto px-5 py-2.5 text-center" />
+                            className="text-white bg-gradient-to-r from-[#105397]  to-blue-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full sm:w-auto px-5 py-2.5 text-center" />
                     </div>
                 </form>
                 <SocialLogin></SocialLogin>

@@ -5,6 +5,7 @@ import useTitle from '../../../hooks/useTitle';
 import Gallery from '../Gallery/Gallery';
 import Loading from '../../Shared/Loading/Loading';
 import Testimonials from '../Testimonials/Testimonials';
+import AboutServices from '../AboutServices/AboutServices';
 
 const Home = () => {
     const [loading, setLoading] = useState(true)
@@ -23,6 +24,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Categories></Categories>
+            <AboutServices></AboutServices>
             <Testimonials></Testimonials>
         </div>
     );

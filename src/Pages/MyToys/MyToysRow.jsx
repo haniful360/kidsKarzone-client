@@ -67,7 +67,7 @@ const MyToysRow = ({ toy, myToys, setMyToys }) => {
             <td>{description}</td>
             <th className='flex gap-3'>
                 <Link to={`/updatetoys/${_id}`}>
-                    <button className="btn btn-ghost bg-base-200 rounded-full btn-md"><AiOutlineEdit className='w-4 h-6'></AiOutlineEdit></button>
+                    <button className="btn btn-ghost bg-base-200 rounded-full btn-md"><AiOutlineEdit className='w-4 h-6 text-[#105397]'></AiOutlineEdit></button>
                 </Link>
                 <button onClick={() => handleDelete(_id)} className="btn btn-ghost bg-base-200 rounded-full btn-md"><AiOutlineDelete className='w-4 h-6 text-red-400'></AiOutlineDelete></button>
             </th>

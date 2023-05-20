@@ -25,7 +25,7 @@ const MiniPoliceCar = ({pCar}) => {
                 </div>
                 <div className="    ">
                 <Link to={`subCategoryDetails/${_id}`}>
-                        <button className="btn btn-xs sm:btn-sm btn-accent text-white capitalize">viewDetails</button>
+                        <button className="btn btn-xs sm:btn-sm btn-accent text-white bg-[#105397] capitalize">viewDetails</button>
                     </Link>
                 </div>
             </div>

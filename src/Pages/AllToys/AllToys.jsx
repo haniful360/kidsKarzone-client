@@ -6,6 +6,8 @@ import Loading from '../Shared/Loading/Loading';
 const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
     const [loading, setLoading] = useState(true)
+    const [searchName, setSearchName] = useState('')
+    // const [toyNames, setToyName] = useState([]);
     useTitle('AllToys')
     useEffect(() => {
         fetch('http://localhost:5000/toys')
@@ -15,11 +17,29 @@ const AllToys = () => {
                 setLoading(false)
             })
     }, [])
-    if(loading){
+
+    const url = `http://localhost:5000/toyname?name=${searchName}`
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                setAllToys(data)
+            })
+    }, [searchName])
+    const handleToyName = (e) => {
+        console.log(e.target.value);
+        setSearchName(e.target.value);
+    }
+
+    if (loading) {
         return <Loading></Loading>
     }
     return (
         <div className='my-12'>
+            <div className='text-center'>
+                <input onChange={handleToyName} type="text" placeholder="Search toy name" className="input input-bordered w-full mb-5 max-w-sm" />
+                <p className='text-3xl mb-4'>Total ToyName:{allToys.length}</p>
+            </div>
             <div className="overflow-y-auto w-full max-w-6xl mx-auto">
                 <table className="table w-full">
                     {/* head */}

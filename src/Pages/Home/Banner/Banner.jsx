@@ -8,20 +8,19 @@ import { HiArrowSmRight, HiArrowSmLeft } from 'react-icons/hi';
 
 const Banner = () => {
     return (
-        <div className="carousel w-full lg:h-[80vh] h-[500px]  rounded-lg mt-4"data-aos="zoom-in-up"
-        data-aos-easing="ease-out-cubic"
-     data-aos-duration="1000">
+        <div className="carousel w-full lg:h-[80vh] h-[500px]  rounded-lg mt-4" data-aos="zoom-in-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={banner1} className="w-full" />
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-5 pl-6 text-center '>
                         <h2 className='banner-title'>Stylish and Compact <br /> Urban Travel</h2>
-                        <p className='banner-des'>Be a hero on wheels with the Rescue Hero Mini Car! Equipped with emergency lights a <br />
-                            nd realistic sirens, this miniature rescue vehicle is ready to spring into action.
-                            Rush to the <br /> scene of pretend emergencies, whether it's a stranded toy or a fallen action figure.</p>
+                        <p className='banner-describe text-[21px] text-white'>Be a hero on wheels with the Rescue Hero Mini Car! Equipped with emergency lights a 
+                            nd realistic <br /> sirens, this miniature rescue vehicle is ready to spring into action.
+                            Rush to the  scene of pretend <br /> emergencies, whether it's a stranded toy or a fallen action figure.</p>
                         <div className='flex gap-3'>
-                            <button className="btn block mx-auto btn-secondary capitalize">get started</button>
-
+                            <button className="btn block bg-[#105397] mx-auto btn-secondary uppercase tracking-widest	">get started</button>
                         </div>
                     </div>
                 </div>
@@ -37,13 +36,13 @@ const Banner = () => {
                     <div className='text-white space-y-5 pl-6 text-center '>
                         <h2 className='banner-title'>
                             Save the Day with <br /> Action-Packed Adventures!"</h2>
-                        <p className='banner-des'>
+                        <p className='banner-describe text-[21px] text-white'>
                             Experience the city in style with the sleek and compact City Cruiser Mini Car!
-                            This trendy little ride is <br /> perfect for navigating busy streets and crowded parking lots. With its modern 
+                            This trendy little ride is <br /> perfect for navigating busy streets and crowded parking lots. With its modern
                             design and efficient <br /> engine, it effortlessly weaves through traffic and fits into
                             tight parking spaces.</p>
                         <div className='flex gap-3'>
-                            <button className="btn block mx-auto btn-secondary capitalize">get started</button>
+                        <button className="btn block bg-[#105397] mx-auto btn-secondary tracking-widest uppercase">get started</button>
 
                         </div>
                     </div>
@@ -59,11 +58,11 @@ const Banner = () => {
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-5 pl-6 text-center '>
                         <h2 className='banner-title'>The Ultimate <br /> Racing Thrill!</h2>
-                        <p className='banner-des'>Get ready for high-speed action with the Speedy Racer Mini Car! This pint-sized
+                        <p className='banner-describe text-[21px] text-white'>Get ready for high-speed action with the Speedy Racer Mini Car! This pint-sized
                             vehicle packs a <br /> punch with its sleek design and powerful motor. Zoom through the
                             track, <br /> maneuvering tight corners and leaving your competitors in the dust</p>
                         <div className='flex gap-3'>
-                            <button className="btn block mx-auto btn-secondary capitalize">get started</button>
+                        <button className="btn block bg-[#105397] mx-auto btn-secondary uppercase tracking-widest	">get started</button>
 
                         </div>
                     </div>
@@ -79,13 +78,13 @@ const Banner = () => {
                 <div className="absolute flex w-full items-center justify-center  h-full bg-gradient-to-r top-0 from-[#15151566] to-[rgba(21, 21, 21, 0)]">
                     <div className='text-white space-y-5 pl-6 text-center '>
                         <h2 className='banner-title'> Conquer the Toughest Terrains</h2>
-                        <p className='banner-des'>
-                            Take on extreme off-road adventures with the Wild Off-Roader Mini Car! 
+                        <p className='banner-describe text-white text-[21px]'>
+                            Take on extreme off-road adventures with the Wild Off-Roader Mini Car!
                             This rugged vehicle is built <br /> to tackle the toughest terrains with ease.
                             Its durable construction, oversized tires, and powerful suspension <br /> system make it perfect for
                             conquering rocky mountains, sandy dunes, and muddy trails.</p>
                         <div className='flex gap-3'>
-                            <button className="btn block mx-auto btn-secondary capitalize">get started</button>
+                        <button className="btn block bg-[#105397] mx-auto btn-secondary uppercase tracking-widest">get started</button>
                         </div>
                     </div>
                 </div>

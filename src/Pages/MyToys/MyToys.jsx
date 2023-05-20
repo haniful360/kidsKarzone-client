@@ -27,10 +27,10 @@ const MyToys = () => {
                 <button className="btn btn-outline btn-success">Ascending</button>
                 <button className="btn btn-outline btn-accent">Descending </button>
             </div>
-            <div className="overflowauto w-full mx-auto">
+            <div className="overflow-auto w-full mx-auto">
                 <table className="table w-full mx-auto">
                     {/* head */}
-                    <thead>
+                    <thead >
                         <tr>
                             <th>img</th>
                             <th>name</th>

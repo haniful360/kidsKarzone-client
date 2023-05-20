@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AllToysTable = ({allToy}) => {
-    const { _id,name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description } = allToy;
+const AllToysTable = ({ allToy }) => {
+    const { _id, name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description } = allToy;
     return (
         <tr>
             <th>
@@ -25,7 +25,10 @@ const AllToysTable = ({allToy}) => {
             <td>${price}</td>
             <td>{quantity}</td>
             <th>
-                <Link to={`/alltoydetails/${_id}`}><button className="btn btn-accent btn-md">details</button></Link>
+
+                <Link to={`/alltoydetails/${_id}`}>
+                    <button className="btn btn-xs sm:btn-sm btn-accent text-white bg-[#105397] capitalize">Details</button>
+                </Link>
             </th>
         </tr>
     );

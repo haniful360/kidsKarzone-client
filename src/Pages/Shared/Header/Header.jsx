@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../../Providers/AuthProviders';
 import ActiveLink from '../../Others/ActiveLink/ActiveLink';
-// import log from '../../../assets/logo.png'
+import logo from '../../../assets/logo1.png'
 
 const Header = () => {
     const { user, logout } = useContext(AuthContext);
@@ -17,17 +17,17 @@ const Header = () => {
         <li><ActiveLink to='/blogs'>Blog</ActiveLink></li>
         {user ? <>
             <div className="flex">
-            <li><ActiveLink to='/addtoys'>Add Toys</ActiveLink></li>
-            <li><ActiveLink to='/mytoys'>My Toys</ActiveLink></li>
-            <li><button onClick={handleLogout}>Logout</button></li>
-            <div className="tooltip tooltip-bottom tooltip-secondary" data-tip={user?.displayName || user?.email}>
-                <img className='w-10 h-10 rounded-full' src={user.photoURL} alt='' />
-            </div>
+                <li><ActiveLink to='/addtoys'>Add Toys</ActiveLink></li>
+                <li><ActiveLink to='/mytoys'>My Toys</ActiveLink></li>
+                <li><button onClick={handleLogout}>Logout</button></li>
+                <div className="tooltip tooltip-bottom tooltip-secondary" data-tip={user?.displayName || user?.email}>
+                    <img className='w-10 h-10 rounded-full' src={user.photoURL} alt='' />
+                </div>
             </div>
         </> : <li><ActiveLink to='/login'>Login</ActiveLink></li>}
     </>
     return (
-        <div className="bg-base-200 shadow ">
+        <div style={{borderBottom:'3px solid #105397'}} className="bg-base-200 h-22 my-auto shadow bg-gradient-to-r from-[#527da8c2] to-[#71879d1b]">
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar">
                     <div className="dropdown">
@@ -39,7 +39,11 @@ const Header = () => {
                         </ul>
                     </div>
                     <Link to='/' className=" font-bold text-xl">
-                      kidsCarZone
+                        <div className='flex h-14 items-center  rounded-lg'>
+                            <img className='h-14' src={logo} alt="" />
+                            <h2 className='text-[#105397] uppercase text-xl mt-2'>KidsCarZone</h2>
+                        </div>
+                        
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -47,9 +51,6 @@ const Header = () => {
                         {navItem}
                     </ul>
                 </div>
-                {/* <div className="navbar-end">
-                <a className="btn">Get started</a>
-            </div> */}
             </div>
         </div>
     );
