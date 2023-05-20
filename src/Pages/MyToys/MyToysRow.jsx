@@ -3,6 +3,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai';
 
 const MyToysRow = ({ toy, myToys, setMyToys }) => {
     const { _id, sellername, description, photoURL, name, rating, quantity, price, subcategory } = toy;
@@ -45,7 +46,7 @@ const MyToysRow = ({ toy, myToys, setMyToys }) => {
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="mask mask-squircle w-20 h-20">
+                        <div className="mask mask-squircle w-16 h-16">
                             <img src={photoURL} alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>
@@ -64,11 +65,11 @@ const MyToysRow = ({ toy, myToys, setMyToys }) => {
                 fullSymbol={<FaStar></FaStar>}
             />{rating}</td>
             <td>{description}</td>
-            <th>
+            <th className='flex gap-3'>
                 <Link to={`/updatetoys/${_id}`}>
-                    <button className="btn btn-ghost btn-md">u</button>
+                    <button className="btn btn-ghost bg-base-200 rounded-full btn-md"><AiOutlineEdit className='w-4 h-6'></AiOutlineEdit></button>
                 </Link>
-                <button onClick={() => handleDelete(_id)} className="btn btn-ghost btn-md">X</button>
+                <button onClick={() => handleDelete(_id)} className="btn btn-ghost bg-base-200 rounded-full btn-md"><AiOutlineDelete className='w-4 h-6 text-red-400'></AiOutlineDelete></button>
             </th>
         </tr>
     );

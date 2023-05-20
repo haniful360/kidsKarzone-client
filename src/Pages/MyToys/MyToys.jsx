@@ -17,6 +17,7 @@ const MyToys = () => {
                 setLoading(false)
             })
     }, [myToys])
+    // loading
     if(loading){
         return <Loading></Loading>
     }
@@ -29,7 +30,7 @@ const MyToys = () => {
                         <tr>
                             <th>img</th>
                             <th>name</th>
-                            <th>sellername</th>
+                            <th>sellerName</th>
                             <th>price</th>
                             <th>A.quantity</th>
                             <th>S.category</th>
