@@ -20,7 +20,7 @@ const Header = () => {
                 <li><ActiveLink to='/addtoys'>Add Toys</ActiveLink></li>
                 <li><ActiveLink to='/mytoys'>My Toys</ActiveLink></li>
                 <li><button onClick={handleLogout}>Logout</button></li>
-                <div className="tooltip tooltip-bottom tooltip-secondary" data-tip={user?.displayName || user?.email}>
+                <div className="tooltip tooltip-bottom tooltip-primary" data-tip={user?.displayName || user?.email}>
                     <img className='w-10 h-10 rounded-full' src={user.photoURL} alt='' />
                 </div>
             </div>

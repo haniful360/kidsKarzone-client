@@ -30,7 +30,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer px-10 py-4 text-white bg-[#105397e6] border-t bg-base-200 border-base-300">
+            <footer className="footer px-10 py-6 text-white bg-[#105397f4] border-t  border-base-300">
                 <div className="items-center grid-flow-col">
                     <p className='text-white'>KidsCarZone<br />&copy; copyright all right reserved by KidsCarZone</p>
                 </div>
