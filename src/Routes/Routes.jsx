@@ -40,7 +40,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'alltoys',
-                element: <AllToys></AllToys>
+                element: <AllToys></AllToys>,
+                
             },
             {
                 path: 'subCategoryDetails/:id',

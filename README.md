@@ -12,3 +12,4 @@ footer section: services, location and social media link add
 update page:
 A person can also update all his added data if he wants
 All toy page: All types of data can be seen here
+blog page: 4 questions added

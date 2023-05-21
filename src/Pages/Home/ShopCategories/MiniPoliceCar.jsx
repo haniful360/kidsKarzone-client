@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Rating from 'react-rating';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../../Providers/AuthProviders';
 
-const MiniPoliceCar = ({pCar}) => {
+
+
+
+const MiniPoliceCar = ({ pCar }) => {
+    const { user } = useContext(AuthContext);
+    const handleToast = () => {
+        if (user) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'welcome to details page',
+                showConfirmButton: true,
+                // timer: 1000
+            })
+        }
+        else {
+            Swal.fire({
+                // icon: 'error',
+                title: 'Oops...',
+                text: 'Please Login Fast',
+            })
+        }
+    }
+
     const { _id, name, photoURL, rating, price } = pCar;
     return (
         <div className="card lg:card-side bg-base-100 shadow-md">
@@ -23,8 +48,8 @@ const MiniPoliceCar = ({pCar}) => {
                     <span>{rating}</span>
 
                 </div>
-                <div className="    ">
-                <Link to={`subCategoryDetails/${_id}`}>
+                <div onClick={handleToast}>
+                    <Link to={`subCategoryDetails/${_id}`}>
                         <button className="btn btn-xs sm:btn-sm btn-accent text-white bg-[#105397] capitalize">viewDetails</button>
                     </Link>
                 </div>

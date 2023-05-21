@@ -31,26 +31,10 @@ const Login = () => {
 
         signInUser(email, password)
             .then(result => {
-                // console.log(result.user);
-                const user = result.user;
-                // form.reset();
-                // navigate(from, { replace: true });
-                // toast('Login successful')
-                const loogedUser = {
-                    email: user.email
-                }
-                console.log(loogedUser);
-                fetch('http://localhost:5000/jwt', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(loogedUser)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        localStorage.setItem('toy-car-access-token', data.token)
-                    })
+                console.log(result.user);
+                form.reset();
+                navigate(from, { replace: true });
+                toast('Login successful')
 
             })
             .catch(err => {
@@ -60,8 +44,6 @@ const Login = () => {
                 else if (err.message.includes('Firebase: Error (auth/user-not-found).')) {
                     setError('Your email is invalid');
                 }
-
-
             })
 
     }

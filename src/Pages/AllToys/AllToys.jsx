@@ -71,7 +71,10 @@ const AllToys = () => {
                     </tbody>
                 </table>
             </div>
+         
         </div>
+
+        
     );
 };
 
