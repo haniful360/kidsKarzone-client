@@ -41,7 +41,7 @@ const Header = () => {
                     <Link to='/' className=" font-bold text-xl">
                         <div className='flex h-14 items-center  rounded-lg'>
                             <img className='h-14' src={logo} alt="" />
-                            <h2 className='text-[#105397] uppercase text-xl mt-2'>KidsCarZone</h2>
+                            <h2 className='text-[#105397]  uppercase text-xl mt-2'>KidsCarZone</h2>
                         </div>
                         
                     </Link>

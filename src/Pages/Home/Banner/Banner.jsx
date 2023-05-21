@@ -21,7 +21,7 @@ const Banner = () => {
                             nd realistic <br /> sirens, this miniature rescue vehicle is ready to spring into action.
                             Rush to the  scene of pretend <br /> emergencies, whether it's a stranded toy or a fallen action figure.</p>
                         <div className='flex gap-3'>
-                            <button className="btn block text-[17px] bg-[#105397] mx-auto btn-sm lg:btn-md md:btn-lg btn-secondary uppercase tracking-tight lg:tracking-widest">get started</button>
+                            <button className="btn block text-[17px] bg-[#105397] hover:bg-[#105397] mx-auto btn-sm lg:btn-md md:btn-lg btn-secondary uppercase tracking-tight lg:tracking-widest">get started</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const Banner = () => {
                             design and efficient <br /> engine, it effortlessly weaves through traffic and fits into
                             tight parking spaces.</p>
                         <div className='flex gap-3'>
-                        <button className="btn block bg-[#105397] mx-auto btn-secondary tracking-widest uppercase">get started</button>
+                        <button className="btn block text-[17px] bg-[#105397] hover:bg-[#105397] mx-auto btn-sm lg:btn-md md:btn-lg btn-secondary uppercase tracking-tight lg:tracking-widest">get started</button>
 
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const Banner = () => {
                             vehicle packs a <br /> punch with its sleek design and powerful motor. Zoom through the
                             track, <br /> maneuvering tight corners and leaving your competitors in the dust</p>
                         <div className='flex gap-3'>
-                        <button className="btn block bg-[#105397] mx-auto btn-secondary uppercase tracking-widest	">get started</button>
+                        <button className="btn block text-[17px] bg-[#105397] hover:bg-[#105397] mx-auto btn-sm lg:btn-md md:btn-lg btn-secondary uppercase tracking-tight lg:tracking-widest">get started</button>
 
                         </div>
                     </div>
@@ -85,7 +85,7 @@ const Banner = () => {
                             Its durable construction, oversized tires, and powerful suspension <br /> system make it perfect for
                             conquering rocky mountains, sandy dunes, and muddy trails.</p>
                         <div className='flex gap-3'>
-                        <button className="btn block bg-[#105397] mx-auto btn-secondary uppercase btn-xs tracking-widest">get started</button>
+                        <button className="btn block text-[17px] bg-[#105397] hover:bg-[#105397] mx-auto btn-sm lg:btn-md md:btn-lg btn-secondary uppercase tracking-tight lg:tracking-widest">get started</button>
                         </div>
                     </div>
                 </div>

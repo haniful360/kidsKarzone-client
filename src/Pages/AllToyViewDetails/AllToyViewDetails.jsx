@@ -10,7 +10,7 @@ const AllToyViewDetails = () => {
     const allToyDetails = useLoaderData();
     const { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description } = allToyDetails;
     return (
-        <div className='max-w-6xl mx-auto my-12' data-aos="fade-up-left">
+        <div className='max-w-6xl mx-auto my-12 px-2 lg:px-0' data-aos="fade-up-left">
             <div className="card lg:card-side bg-base-100 shadow-md">
                 <figure><img className='h-[400px]' src={photoURL} alt="Album" /></figure>
                 <div className="card-body">
@@ -30,7 +30,7 @@ const AllToyViewDetails = () => {
                             placeholderSymbol={<FaStar className="text-warning"></FaStar>}
                             fullSymbol={<FaStar></FaStar>}
                         />
-                        {rating}
+                        <span className='bg-[#1053973b] p-1 rounded-full'>{rating}</span>
                     </div>
                    
 
