@@ -10,7 +10,7 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState([]);
     useTitle('MyToys')
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?email=${user?.email}`)
+        fetch(`https://kids-car-zone-server.vercel.app/toys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data)
@@ -19,19 +19,18 @@ const MyToys = () => {
     }, [])
     // ascending data
     const handleAscending = () => {
-        // e.preventDefault()
-        fetch(`http://localhost:5000/ascending?email=${user?.email}`)
+        fetch(`https://kids-car-zone-server.vercel.app/ascending?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }
 
     // decending data
     const handleDecending = () => {
-        fetch(`http://localhost:5000/decending?email=${user?.email}`)
+        fetch(`https://kids-car-zone-server.vercel.app/decending?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }
-    
+
     // loading
     if (loading) {
         return <Loading></Loading>

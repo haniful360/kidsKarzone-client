@@ -20,7 +20,7 @@ const MyToysRow = ({ toy, myToys, setMyToys }) => {
         })
             .then(result => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/toys/${id}`, {
+                    fetch(`https://kids-car-zone-server.vercel.app/toys/${id}`, {
                         method: 'DELETE',
                     })
                         .then(res => res.json())
@@ -29,10 +29,10 @@ const MyToysRow = ({ toy, myToys, setMyToys }) => {
                             if (data.deletedCount === 1) {
                                 Swal.fire(
                                     'Deleted!',
-                                    'Your Coffee has been deleted.',
+                                    'Your Toy has been deleted.',
                                     'success'
                                 )
-                                const remaining = myToys.filter(booking => booking._id !== _id)
+                                const remaining = myToys.filter(myToy => myToy._id !== _id)
                                 setMyToys(remaining)
                             }
                         })

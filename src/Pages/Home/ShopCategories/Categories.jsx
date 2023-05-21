@@ -20,7 +20,7 @@ const Categories = () => {
     };
     // sports car
     useEffect(() => {
-        fetch(`http://localhost:5000/subcategory?subcategory=${sportsCar}`)
+        fetch(`https://kids-car-zone-server.vercel.app/subcategory?subcategory=${sportsCar}`)
             .then(res => res.json())
             .then(data => {
                 setSportsCars(data);
@@ -28,7 +28,7 @@ const Categories = () => {
     }, [])
     // mini fire truck
     useEffect(() => {
-        fetch(`http://localhost:5000/subcategory?subcategory=${firetruck}`)
+        fetch(`https://kids-car-zone-server.vercel.app/subcategory?subcategory=${firetruck}`)
             .then(res => res.json())
             .then(data => {
                 setFireTrucks(data);
@@ -36,7 +36,7 @@ const Categories = () => {
     }, [])
     // mini police car
     useEffect(() => {
-        fetch(`http://localhost:5000/subcategory?subcategory=${policeCar}`)
+        fetch(`https://kids-car-zone-server.vercel.app/subcategory?subcategory=${policeCar}`)
             .then(res => res.json())
             .then(data => {
                 setPoliceCars(data);

@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { useLoaderData } from 'react-router-dom';
 
 const UpdateToys = () => {
-    
+
     const { user } = useContext(AuthContext);
     const loadToyData = useLoaderData();
     const {_id,name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description} = loadToyData;
@@ -25,7 +25,7 @@ const UpdateToys = () => {
 
         const updateToys = { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description }
       
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://kids-car-zone-server.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updateToys)
@@ -41,6 +41,7 @@ const UpdateToys = () => {
                         confirmButtonText: 'OK'
                       })
                 }
+                // form.reset();
             })
 
     }
