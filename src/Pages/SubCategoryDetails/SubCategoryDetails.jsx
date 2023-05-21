@@ -3,12 +3,15 @@ import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Loading from '../Shared/Loading/Loading';
+import useTitle from '../../hooks/useTitle';
 
 const SubCategoryDetails = () => {
     const [loading, setLoading] = useState(true);
 
     const singleSubcategory = useLoaderData();
     const { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description } = singleSubcategory;
+
+    useTitle('subcategory')
 
     useEffect(() => {
         setTimeout(() => {
@@ -20,9 +23,9 @@ const SubCategoryDetails = () => {
     }
 
     return (
-        <div className='max-w-6xl mx-auto my-16 '>
+        <div className='max-w-6xl mx-auto my-16' data-aos="fade-down">
             <div className="card w-5/12 mx-auto shadow border-2 border-t-[#105397]">
-                <figure><img src={photoURL} alt="Shoes" /></figure>
+                <figure><img className='h-[350px] w-full' src={photoURL} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         name:

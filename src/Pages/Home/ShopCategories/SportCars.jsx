@@ -28,7 +28,7 @@ const SportCars = ({ sCar }) => {
     }
     const { _id, name, photoURL, rating, price } = sCar;
     return (
-        <div className="card lg:card-side bg-base-100 shadow-md">
+        <div className="card lg:card-side bg-base-100 shadow-md" data-aos="zoom-in-up">
             <figure className=''> <img className='lg:w-[300px] lg:h-[250px] rounded' src={photoURL} alt="Album" /></figure>
             <div className="card-body">
                 <h3 className="text-xl">{name}</h3>

@@ -3,7 +3,7 @@ import './Gallery.css'
 
 const Gallery = () => {
     return (
-        <div className='mb-12'>
+        <div className='mb-12 px-2 lg:px-0'>
             <div className="gallery">
                 <h2>Our Gallery</h2>
                 <p className='text-xl mb-10'>In our car gallery, we curate a diverse selection of vehicles that <br /> cater to various tastes and preferences. </p>

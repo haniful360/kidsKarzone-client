@@ -5,9 +5,9 @@ const ClientReview = ({ review }) => {
     const { name, description, img, state } = review;
     return (
         <div>
-            <div className="card shadow-md my-2" data-aos="fade-down"
+            <div className="card shadow-md my-2" data-aos="zoom-in-up"
                 data-aos-easing="linear"
-                data-aos-duration="1000">
+                data-aos-duration="500">
                 <div className="card-body">
                     <p className='text-[20px]'>{description}</p>
                 </div>

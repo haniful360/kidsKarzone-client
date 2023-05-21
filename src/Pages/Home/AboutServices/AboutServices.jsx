@@ -5,7 +5,7 @@ const AboutServices = () => {
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-6 lg:px-0 px-4">
                 <div data-aos="zoom-in">
-                    <h1 className="text-4xl leading-[78px] uppercase font-bold">We are provide  professional  service</h1>
+                    <h1 className="text-2xl lg:text-4xl leading-[78px] uppercase font-bold">We are provide  professional  service</h1>
                    
                     <p className="py-6 lg:w-[600px]"> If your toy car experiences any mechanical issues, our skilled technicians are here to help. From fixing jammed wheels to repairing broken gears, we have the expertise to diagnose and resolve a wide range of mechanical problems. We use high-quality replacement parts to ensure durability and functionality</p>
                     <button className="btn tracking-widest bg-[#105397]">Learn More</button>

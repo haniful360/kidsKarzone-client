@@ -104,13 +104,7 @@ const Register = () => {
                             <p onClick={() => setShow(!show)} className='absolute top-[468px] left-80 lg:left-96'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p>
                             {/* <a className="text-sm font-medium text-blue-500 hover:text-indigo-500" href="#">Forgot Password?</a> */}
                         </div>
-                        {/* <div className="flex items-center space-x-2">
-                            <input id="remember" aria-describedby="remember" type="checkbox"
-                                className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300"
-                                required />
-                            <label htmlFor="remember" className="font-medium text-gray-900">Remember
-                                me</label>
-                        </div> */}
+                        
                         <input type="submit" value='Register'
                             className="text-white bg-gradient-to-r from-[#105397]  to-blue-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm w-full sm:w-auto px-5 py-2.5 text-center" />
                     </div>

@@ -10,7 +10,7 @@ const Testimonials = () => {
         { _id: 3, description: "I purchased the mini toy car as a gift for my nephew's birthday, and he couldn't have been happier. He spent hours zooming the car around the house, creating his own little races and adventures. The car is easy to maneuver, and the compact size makes it perfect for indoor play.", name: 'William Son', state: "Melbourne" ,img: person3}
     ]
     return (
-        <section className='my-20  lg:px-0 px-4'>
+        <section className='my-20  lg:px-0 px-2'>
             <div className='flex justify-between items-center'>
                 <div className=''>
                     <h4 className='font-bol text-xl text-[#105397]'>Testimonial</h4>

@@ -5,7 +5,7 @@ import useTitle from '../../hooks/useTitle';
 const Blogs = () => {
     useTitle('Blogs')
     return (
-        <div className='mb-12'>
+        <div className='mb-12 lg:px-0 px-2'>
             <h1 className='text-3xl mt-6 text-center'>Free Quently Ask Questions?</h1>
             <div className="lg:w-[1280px] mx-auto card card-compact bg-base-100 shadow-xl my-12">
 

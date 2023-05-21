@@ -6,7 +6,7 @@ import useTitle from '../../hooks/useTitle';
 
 const AllToyViewDetails = () => {
     const { id } = useParams();
-    useTitle('AllDetails')
+    useTitle('ToyDetails')
     const allToyDetails = useLoaderData();
     const { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description } = allToyDetails;
     return (
