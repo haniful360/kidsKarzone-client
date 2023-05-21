@@ -36,7 +36,7 @@ const MyToys = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='max-w-6xl mx-auto my-12'>
+        <div className='max-w-7xl mx-auto my-12'>
             <h2 className='toy-title tracking-wider text-center text-4xl text-[#105397]'>My Toys</h2>
             <div className='flex gap-2 justify-end my-8'>
             <button onClick={handleAscending}  className="btn bg-[#3485d5] hover:bg-[#237cd4] tracking-widest">ascending </button>

@@ -26,8 +26,8 @@ const Banner = () => {
                 </div>
                 {/* banner arrow icon */}
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 gap-6 bottom-0">
-                    <a href="#slide4" className="btn btn-circle"><HiArrowSmLeft></HiArrowSmLeft></a>
-                    <a href="#slide2" className="btn btn-circle btn-secondary"><HiArrowSmRight></HiArrowSmRight></a>
+                    <a href="#slide4" className="btn btn-circle"><HiArrowSmLeft style={{fontSize:'24px'}}></HiArrowSmLeft></a>
+                    <a href="#slide2" className="btn btn-circle hover:bg-[#105397] bg-[#0978e6]"><HiArrowSmRight style={{fontSize:'24px'}}></HiArrowSmRight></a>
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
@@ -49,8 +49,8 @@ const Banner = () => {
                 </div>
                 {/* banner arrow icon */}
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 gap-6 bottom-0">
-                    <a href="#slide1" className="btn btn-circle"><HiArrowSmLeft></HiArrowSmLeft></a>
-                    <a href="#slide3" className="btn btn-circle btn-secondary"><HiArrowSmRight></HiArrowSmRight></a>
+                    <a href="#slide1" className="btn btn-circle"><HiArrowSmLeft style={{fontSize:'24px'}}></HiArrowSmLeft></a>
+                    <a href="#slide3" className="btn btn-circle hover:bg-[#105397] bg-[#0978e6]"><HiArrowSmRight style={{fontSize:'24px'}}></HiArrowSmRight></a>
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
@@ -69,8 +69,8 @@ const Banner = () => {
                 </div>
                 {/* banner arrow icon */}
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 gap-6 bottom-0">
-                    <a href="#slide2" className="btn btn-circle"><HiArrowSmLeft></HiArrowSmLeft></a>
-                    <a href="#slide4" className="btn btn-circle btn-secondary"><HiArrowSmRight></HiArrowSmRight></a>
+                    <a href="#slide2" className="btn btn-circle"><HiArrowSmLeft style={{fontSize:'24px'}}></HiArrowSmLeft></a>
+                    <a href="#slide4" className="btn btn-circle hover:bg-[#105397] bg-[#0978e6]"><HiArrowSmRight style={{fontSize:'24px'}}></HiArrowSmRight></a>
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
@@ -90,8 +90,8 @@ const Banner = () => {
                 </div>
                 {/* banner arrow icon */}
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 gap-6 bottom-0">
-                    <a href="#slide3" className="btn btn-circle"><HiArrowSmLeft></HiArrowSmLeft></a>
-                    <a href="#slide1" className="btn btn-circle btn-secondary"><HiArrowSmRight></HiArrowSmRight></a>
+                    <a href="#slide3" className="btn btn-circle"><HiArrowSmLeft style={{fontSize:'24px'}}></HiArrowSmLeft></a>
+                    <a href="#slide1" className="btn btn-circle hover:bg-[#105397] bg-[#0978e6]"><HiArrowSmRight style={{fontSize:'24px'}}></HiArrowSmRight></a>
                 </div>
             </div>
         </div>

@@ -36,7 +36,8 @@ const AllToys = () => {
     }
     return (
         <div className='my-12'>
-            <h2 className='toy-title tracking-wider text-center text-4xl text-[#105397] my-4' data-aos="fade-down">All Toys</h2>
+           
+            <h2 className='toy-title tracking-wider text-center text-4xl text-[#105397] my-4' data-aos="fade-down">All Toys: {allToys.length}</h2>
             <div className='text-center'>
                 <input onChange={handleToyName} type="text" placeholder="Search toy name..." className="input input-bordered w-full mb-5 max-w-sm" />
             </div>

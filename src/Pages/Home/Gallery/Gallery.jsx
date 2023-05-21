@@ -21,7 +21,7 @@ const Gallery = () => {
                         </div>
                     </div>
                     <div className="gallery_photo"data-aos="fade-left">
-                        <img className='lg:w[400px] h-[300px]' src="https://i.ibb.co/R3fMcLW/maxresdefault.jpg" alt="" />
+                        <img className='lg:w[400px] h-[300px]' src="https://thumbs.dreamstime.com/b/ilidza-bosnia-herzegovina-may-police-car-old-timer-i-ilidza-bosnia-hrzegovina-ilidza-bosnia-herzegovina-may-police-car-200538246.jpg" alt="" />
                         <div className="layer">
                             <h3>OUR FANCY CARS</h3>
                         </div>
@@ -51,31 +51,31 @@ const Gallery = () => {
                         </div>
                     </div>
                     <div className="gallery_photo"data-aos="fade-right">
-                        <img className='lg:w[400px] h-[300px]' src="https://i.ibb.co/gShyKxK/download-1.jpg" alt="" />
+                        <img className='lg:w[400px] h-[300px]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBA-EiIPudBa3acy_M3z8fW7E6Gqg9mVwbFflsABfbC0M-gFEFR_yC5vkZPuCUb0H3PHc&usqp=CAU" alt="" />
                         <div className="layer">
                             <h3>OUR FANCY CARS</h3>
                         </div>
                     </div>
                     <div className="gallery_photo"data-aos="fade-up">
-                        <img className='lg:w[400px] h-[300px]' src="https://i.ibb.co/2n8kKNT/download.jpg" alt="" />
+                        <img className='lg:w[400px] h-[300px]' src="https://m.media-amazon.com/images/I/61oGRLdWzAL._AC_UF894,1000_QL80_.jpg" alt="" />
                         <div className="layer">
                             <h3>OUR FANCY CARS</h3>
                         </div>
                     </div>
                     <div className="gallery_photo"data-aos="fade-up">
-                        <img className='lg:w[400px] h-[300px]' src="https://i.ibb.co/DbdZNTX/DK-M720-S-PP.jpg" alt="" />
+                        <img className='lg:w[400px] h-[300px]' src="https://i.ebayimg.com/images/g/4pcAAOSwBDlaxTn-/s-l1600.jpg" alt="" />
                         <div className="layer">
                             <h3>OUR FANCY CARS</h3>
                         </div>
                     </div>
                     <div className="gallery_photo"data-aos="fade-up">
-                        <img className='lg:w[400px] h-[300px]' src="https://i.ibb.co/2n8kKNT/download.jpg" alt="" />
+                        <img className='lg:w[400px] h-[300px]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZaCx1jlqOPwoWGhBmfDo3-GgWqgMH3F1quQ&usqp=CAU" alt="" />
                         <div className="layer">
                             <h3>OUR FANCY CARS</h3>
                         </div>
                     </div>
                     <div className="gallery_photo"data-aos="fade-up">
-                        <img className='lg:w[400px] h-[300px]' src="https://i.ibb.co/2NkRPDw/s-l1600.jpg" alt="" />
+                        <img className='lg:w[400px] h-[300px]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtbHnObyEDZBevi898PMQeuVTZ1xfI1lbLnOp71LrZ8Nwvq80YSkoGl1AoUgRIqCx7CPw&usqp=CAU" alt="" />
                         <div className="layer">
                             <h3>OUR FANCY CARS</h3>
                         </div>

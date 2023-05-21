@@ -14,7 +14,7 @@ const Header = () => {
     const navItem = <>
         <li><ActiveLink to='/'>Home</ActiveLink></li>
         <li><ActiveLink to='/alltoys'>All Toys</ActiveLink></li>
-        <li><ActiveLink to='/blogs'>Blog</ActiveLink></li>
+        <li><ActiveLink to='/blogs'>Blogs</ActiveLink></li>
         {user ? <>
             <div className="flex">
                 <li><ActiveLink to='/addtoys'>Add Toys</ActiveLink></li>

@@ -76,7 +76,7 @@ const Categories = () => {
                     <div
                         className={toggleState === 1 ? "content  active-content" : "content"}
                     >
-                        <h2>content</h2>
+                        <h2 className='text-2xl text-[#105397]'>content:1</h2>
                         <hr />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
@@ -91,7 +91,7 @@ const Categories = () => {
                     <div
                         className={toggleState === 2 ? "content  active-content" : "content"}
                     >
-                        <h2>Content 2</h2>
+                        <h2 className='text-2xl text-[#105397]'>content:2</h2>
                         <hr />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                             {
@@ -105,7 +105,7 @@ const Categories = () => {
                     <div
                         className={toggleState === 3 ? "content  active-content" : "content"}
                     >
-                        <h2 className='text-xl'>Content 3</h2>
+                        <h2 className='text-2xl text-[#105397]'>content:3</h2>
                         <hr />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                             {

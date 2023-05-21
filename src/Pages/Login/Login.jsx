@@ -22,7 +22,7 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value;
         // console.log(email, password);
-       
+
 
         if (password.length < 6) {
             setError('your pass must be 6 characters')
@@ -31,10 +31,26 @@ const Login = () => {
 
         signInUser(email, password)
             .then(result => {
-                console.log(result.user);
-                form.reset();
-                navigate(from, { replace: true });
-                toast('Login successful')
+                // console.log(result.user);
+                const user = result.user;
+                // form.reset();
+                // navigate(from, { replace: true });
+                // toast('Login successful')
+                const loogedUser = {
+                    email: user.email
+                }
+                console.log(loogedUser);
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(loogedUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        localStorage.setItem('toy-car-access-token', data.token)
+                    })
 
             })
             .catch(err => {
@@ -68,11 +84,11 @@ const Login = () => {
                         <div className=''>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your
                                 password</label>
-                            <input type=/* {show ? 'text' : 'password'} */'password' id="password" name='password'
+                            <input type={show ? 'text' : 'password'} id="password" name='password'
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="password" required />
                             <p className='text-red-600'>{error}</p>
-                            <p onClick={() => setShow(!show)} className='absolute top-[235px] left-72 lg:left-80'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p>
+                            <p onClick={() => setShow(!show)} className='absolute top-[241px] left-72 lg:left-80'>{show ? <AiFillEyeInvisible style={{ fontSize: '24px' }}></AiFillEyeInvisible> : <AiFillEye style={{ fontSize: '24px' }}></AiFillEye>}</p>
                             <a className="text-sm font-medium text-blue-500 hover:text-indigo-500" href="#">Forgot Password?</a>
                         </div>
                         <div className="flex items-center space-x-2">

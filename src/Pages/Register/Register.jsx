@@ -97,11 +97,11 @@ const Register = () => {
                         <div className=''>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your
                                 password</label>
-                            <input type=/* {show ? 'text' : 'password'} */'password' id="password" name='password'
+                            <input type={show ? 'text' : 'password'} id="password" name='password'
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="password" required />
                             <p className='text-red-600'>{error}</p>
-                            <p onClick={() => setShow(!show)} className='absolute top-[462px] left-80 lg:left-96'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p>
+                            <p onClick={() => setShow(!show)} className='absolute top-[468px] left-80 lg:left-96'>{show ? <AiFillEyeInvisible style={{fontSize:'24px'}}></AiFillEyeInvisible> :<AiFillEye style={{fontSize:'24px'}}></AiFillEye>}</p>
                             {/* <a className="text-sm font-medium text-blue-500 hover:text-indigo-500" href="#">Forgot Password?</a> */}
                         </div>
                         {/* <div className="flex items-center space-x-2">
