@@ -56,13 +56,13 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="Name" name='name' className="input input-bordered w-full" />
+                        <input type="text" placeholder="Name" name='name' className="input input-bordered w-full" required />
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">seller name</span>
                         </label>
-                        <input type="text" defaultValue={user?.displayName} placeholder="seller name" name='sellername' className="input input-bordered w-full" />
+                        <input type="text" defaultValue={user?.displayName} placeholder="seller name" name='sellername' className="input input-bordered w-full" required />
                     </div>
                 </div>
                 {/* row 2 */}
@@ -71,13 +71,13 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">seller email</span>
                         </label>
-                        <input type="email" defaultValue={user?.email} placeholder="seller email" name='selleremail' className="input input-bordered w-full" />
+                        <input type="email" defaultValue={user?.email} placeholder="seller email" name='selleremail' className="input input-bordered w-full" required />
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">price</span>
                         </label>
-                        <input type="number" placeholder="price" name='price' className="input input-bordered w-full" />
+                        <input type="number" placeholder="price" name='price' className="input input-bordered w-full" required />
                     </div>
                 </div>
                 {/* row 3 */}
@@ -86,7 +86,7 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">sub category</span>
                         </label>
-                        <select name='subcategory' className="select select-bordered w-full">
+                        <select name='subcategory' className="select select-bordered w-full" required>
                             <option defaultValue="selected">Subcategory</option>
                             <option value='SportsCar'>SportsCar</option>
                             <option value="MiniFireTruck">MiniFireTruck</option>
@@ -97,7 +97,7 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">rating</span>
                         </label>
-                        <input type="number" placeholder="rating" name='rating' className="input input-bordered w-full" />
+                        <input type="number" placeholder="rating" name='rating' className="input input-bordered w-full" required />
                     </div>
                 </div>
                 {/* row 4 */}
@@ -106,13 +106,13 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">available quantity</span>
                         </label>
-                        <input type="number" placeholder="available quantity" name='quantity' className="input input-bordered w-full" />
+                        <input type="number" placeholder="available quantity" name='quantity' className="input input-bordered w-full" required />
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">PhotoURL</span>
                         </label>
-                        <input type="text" placeholder="PhotoURL" name='PhotoURL' className="input input-bordered w-full" />
+                        <input type="text" placeholder="PhotoURL" name='PhotoURL' className="input input-bordered w-full" required />
                     </div>
                 </div>
                 {/* row 5 */}
@@ -120,7 +120,7 @@ const AddToys = () => {
                     <label className="label">
                         <span className="label-text">details descriptions</span>
                     </label>
-                    <textarea className="textarea textarea-bordered w-full" name='description' placeholder="Details Descriptions"></textarea>
+                    <textarea className="textarea textarea-bordered w-full" required name='description' placeholder="Details Descriptions"></textarea>
                 </div>
                 <input type="submit" value="Add a Toys" className='btn btn-block bg-[#105397] hover:bg-[#104981] tracking-widest mt-6' />
             </form>

@@ -48,11 +48,11 @@ const MiniFireTruck = ({ fTruck }) => {
 
                 </div>
                 <div onClick={handleToast}>
-                <Link to={`subCategoryDetails/${_id}`}>
-                    
+                    <Link to={`subCategoryDetails/${_id}`}>
+
                         <button className="btn btn-xs sm:btn-sm btn-accent text-white bg-[#105397] capitalize">viewDetails</button>
                     </Link>
-                    
+
                 </div>
             </div>
         </div>

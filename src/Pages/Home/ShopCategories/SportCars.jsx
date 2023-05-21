@@ -3,6 +3,7 @@ import Rating from 'react-rating';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProviders';
+import Swal from 'sweetalert2';
 
 const SportCars = ({ sCar }) => {
 
