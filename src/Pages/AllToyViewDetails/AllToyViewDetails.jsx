@@ -10,7 +10,7 @@ const AllToyViewDetails = () => {
     const allToyDetails = useLoaderData();
     const { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description } = allToyDetails;
     return (
-        <div className='max-w-6xl mx-auto my-12'>
+        <div className='max-w-6xl mx-auto my-12' data-aos="fade-up-left">
             <div className="card lg:card-side bg-base-100 shadow-md">
                 <figure><img className='h-[400px]' src={photoURL} alt="Album" /></figure>
                 <div className="card-body">

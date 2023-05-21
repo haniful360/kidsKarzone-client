@@ -7,7 +7,7 @@ const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
     const [loading, setLoading] = useState(true)
     const [searchName, setSearchName] = useState('')
-    // const [toyNames, setToyName] = useState([]);
+
     useTitle('AllToys')
     useEffect(() => {
         fetch('https://kids-car-zone-server.vercel.app/alltoys')
@@ -36,9 +36,9 @@ const AllToys = () => {
     }
     return (
         <div className='my-12'>
+            <h2 className='toy-title tracking-wider text-center text-4xl text-[#105397] my-4' data-aos="fade-down">All Toys</h2>
             <div className='text-center'>
-                <input onChange={handleToyName} type="text" placeholder="Search toy name" className="input input-bordered w-full mb-5 max-w-sm" />
-                <p className='text-3xl mb-4'>Total ToyName:{allToys.length}</p>
+                <input onChange={handleToyName} type="text" placeholder="Search toy name..." className="input input-bordered w-full mb-5 max-w-sm" />
             </div>
             <div className="overflow-y-auto w-full max-w-6xl mx-auto">
                 <table className="table w-full">
@@ -68,17 +68,6 @@ const AllToys = () => {
                         }
 
                     </tbody>
-                    {/* foot */}
-                    {/* <tfoot>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
-                        </tr>
-                    </tfoot> */}
-
                 </table>
             </div>
         </div>

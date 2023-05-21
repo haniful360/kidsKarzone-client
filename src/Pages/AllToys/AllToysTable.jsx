@@ -13,7 +13,7 @@ const AllToysTable = ({ allToy }) => {
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="mask mask-squircle w-16 h-16">
+                        <div className="mask rounded w-16 h-16">
                             <img src={photoURL} alt="Avatar Tailwind CSS Component" />
                         </div>
                     </div>

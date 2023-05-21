@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+
+
 const MiniFireTruck = ({ fTruck }) => {
     const { _id, name, photoURL, rating, price } = fTruck;
     return (
@@ -24,8 +26,10 @@ const MiniFireTruck = ({ fTruck }) => {
                 </div>
                 <div className="    ">
                 <Link to={`subCategoryDetails/${_id}`}>
+                    
                         <button className="btn btn-xs sm:btn-sm btn-accent text-white bg-[#105397] capitalize">viewDetails</button>
                     </Link>
+                    
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ const AddToys = () => {
         const description = form.description.value;
 
         const addToys = { name, sellername, selleremail, price, subcategory, rating, quantity, photoURL, description }
-        console.log(addToys);
+        // console.log(addToys);
     
 
         fetch('https://kids-car-zone-server.vercel.app/toys', {
@@ -46,9 +46,9 @@ const AddToys = () => {
     }
     return (
         <div className='my-12 max-w-6xl mx-auto'>
-            <div className='bg-[#387bbff1] rounded-md p-12'>
-            <h2 className='toy-title text-center'>Add a Toys</h2>
-            <p className='toy-des'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, minima suscipit laborum quasi harum explicabo vitae consectetur rerum error nobis.</p>
+            <div className='bg-[#F3F3F3] rounded-md p-12'>
+            <h2 className='toy-title tracking-wider text-center text-4xl text-[#105397]'>Add a Toys</h2>
+            <p className='toy-des text-[22px] text-center my-4'>Toy cars can be modeled after different types of vehicles, including sports cars, classic cars, trucks, <br /> SUVs, and race cars. They may also be based on popular   movie or cartoon characters, <br /> giving them  a unique and recognizable appearance.    </p>
             <form onSubmit={handleAddToys}>
                 {/* row 1 */}
                 <div className="md:flex gap-6">
@@ -87,7 +87,8 @@ const AddToys = () => {
                             <span className="label-text">sub category</span>
                         </label>
                         <select name='subcategory' className="select select-bordered w-full">
-                            <option value='SportsCar' selected>SportsCar</option>
+                            <option defaultValue="selected">Subcategory</option>
+                            <option value='SportsCar'>SportsCar</option>
                             <option value="MiniFireTruck">MiniFireTruck</option>
                             <option value='MiniPoliceCar'>MiniPoliceCar</option>
                         </select>
@@ -96,7 +97,7 @@ const AddToys = () => {
                         <label className="label">
                             <span className="label-text">rating</span>
                         </label>
-                        <input type="text" placeholder="rating" name='rating' className="input input-bordered w-full" />
+                        <input type="number" placeholder="rating" name='rating' className="input input-bordered w-full" />
                     </div>
                 </div>
                 {/* row 4 */}
@@ -121,7 +122,7 @@ const AddToys = () => {
                     </label>
                     <textarea className="textarea textarea-bordered w-full" name='description' placeholder="Details Descriptions"></textarea>
                 </div>
-                <input type="submit" value="Add a Toys" className='btn btn-block btn btn-accent outline-0 text-white capitalize mt-6' />
+                <input type="submit" value="Add a Toys" className='btn btn-block bg-[#105397] hover:bg-[#104981] tracking-widest mt-6' />
             </form>
         </div>
         </div>

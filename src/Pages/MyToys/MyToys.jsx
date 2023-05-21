@@ -16,7 +16,7 @@ const MyToys = () => {
                 setMyToys(data)
                 setLoading(false);
             })
-    }, [])
+    }, [user])
     // ascending data
     const handleAscending = () => {
         fetch(`https://kids-car-zone-server.vercel.app/ascending?email=${user?.email}`)
@@ -37,9 +37,10 @@ const MyToys = () => {
     }
     return (
         <div className='max-w-6xl mx-auto my-12'>
-            <div>
-                <button onClick={handleAscending} className="btn btn-outline btn-success">Ascending</button>
-                <button onClick={handleDecending} className="btn btn-outline btn-accent">Descending </button>
+            <h2 className='toy-title tracking-wider text-center text-4xl text-[#105397]'>My Toys</h2>
+            <div className='flex gap-2 justify-end my-8'>
+            <button onClick={handleAscending}  className="btn bg-[#3485d5] hover:bg-[#237cd4] tracking-widest">ascending </button>
+                <button onClick={handleDecending}  className="btn bg-[#105397] hover:bg-[#105397] tracking-widest">Descending </button>
             </div>
             <div className="overflow-auto w-full mx-auto">
                 <table className="table w-full mx-auto">

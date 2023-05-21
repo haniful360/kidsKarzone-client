@@ -44,13 +44,13 @@ const router = createBrowserRouter([
             },
             {
                 path: 'subCategoryDetails/:id',
-                element: <SubCategoryDetails></SubCategoryDetails>,
-                loader:({params}) => fetch(`https://kids-car-zone-server.vercel.app/subcategory/${params.id}`)
+                element: <PrivateRoute><SubCategoryDetails></SubCategoryDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://kids-car-zone-server.vercel.app/subcategory/${params.id}`)
             },
             {
                 path: 'alltoydetails/:id',
                 element: <PrivateRoute><AllToyViewDetails></AllToyViewDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`https://kids-car-zone-server.vercel.app/toys/${params.id}`)
+                loader: ({ params }) => fetch(`https://kids-car-zone-server.vercel.app/toys/${params.id}`)
 
             },
             {
