@@ -21,7 +21,7 @@ const Gallery = () => {
                         </div>
                     </div>
                     <div className="gallery_photo"data-aos="fade-left">
-                        <img className='lg:w[400px] h-[300px]' src="https://thumbs.dreamstime.com/b/ilidza-bosnia-herzegovina-may-police-car-old-timer-i-ilidza-bosnia-hrzegovina-ilidza-bosnia-herzegovina-may-police-car-200538246.jpg" alt="" />
+                        <img className='lg:w[400px] h-[300px]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSByxzZrVleowsTl3NrqeIdLHLTr-srO4sN5NBbLhXIGjA2BId_rhYI416P8xd9JlSJIWU&usqp=CAU" alt="" />
                         <div className="layer">
                             <h3>OUR FANCY CARS</h3>
                         </div>
